@@ -1,0 +1,126 @@
+{
+ "rb": "RB1",
+ "source": "AEMET OpenData — valores climatológicos diarios",
+ "stations": [
+  {
+   "id": "9491X",
+   "lat": 42.029444,
+   "lon": -0.585833,
+   "alt": 390,
+   "prov": "HUESCA",
+   "nom": "ALMUDÉVAR"
+  },
+  {
+   "id": "9495Y",
+   "lat": 41.796667,
+   "lon": -0.617222,
+   "alt": 405,
+   "prov": "ZARAGOZA",
+   "nom": "LECIÑENA"
+  },
+  {
+   "id": "9576C",
+   "lat": 41.521944,
+   "lon": -0.174167,
+   "alt": 357,
+   "prov": "ZARAGOZA",
+   "nom": "BUJARALOZ"
+  },
+  {
+   "id": "9756X",
+   "lat": 42.1125,
+   "lon": 0.48,
+   "alt": 765,
+   "prov": "HUESCA",
+   "nom": "BENABARRE"
+  },
+  {
+   "id": "9808X",
+   "lat": 42.421667,
+   "lon": 0.138056,
+   "alt": 610,
+   "prov": "HUESCA",
+   "nom": "AÍNSA-SOBRARBE, LA SERRETA"
+  },
+  {
+   "id": "9843A",
+   "lat": 42.476944,
+   "lon": 0.434167,
+   "alt": 825,
+   "prov": "HUESCA",
+   "nom": "SEIRA"
+  },
+  {
+   "id": "9855E",
+   "lat": 42.201389,
+   "lon": 0.466111,
+   "alt": 600,
+   "prov": "HUESCA",
+   "nom": "CAPELLA, LAGUARRES"
+  },
+  {
+   "id": "9866C",
+   "lat": 42.021389,
+   "lon": 0.140556,
+   "alt": 305,
+   "prov": "HUESCA",
+   "nom": "BARBASTRO"
+  },
+  {
+   "id": "9894Y",
+   "lat": 41.799167,
+   "lon": -0.160833,
+   "alt": 300,
+   "prov": "HUESCA",
+   "nom": "SARIÑENA"
+  },
+  {
+   "id": "9898",
+   "lat": 42.084444,
+   "lon": -0.325556,
+   "alt": 546,
+   "prov": "HUESCA",
+   "nom": "HUESCA, AEROPUERTO"
+  },
+  {
+   "id": "9901X",
+   "lat": 42.138889,
+   "lon": -0.395,
+   "alt": 463,
+   "prov": "HUESCA",
+   "nom": "HUESCA"
+  },
+  {
+   "id": "9908X",
+   "lat": 41.773889,
+   "lon": -0.333056,
+   "alt": 380,
+   "prov": "HUESCA",
+   "nom": "LANAJA"
+  },
+  {
+   "id": "9911X",
+   "lat": 41.619444,
+   "lon": 0.187778,
+   "alt": 178,
+   "prov": "HUESCA",
+   "nom": "BALLOBAR"
+  },
+  {
+   "id": "9918Y",
+   "lat": 41.780833,
+   "lon": 0.376944,
+   "alt": 218,
+   "prov": "HUESCA",
+   "nom": "TAMARITE DE LITERA, LA MELUSA"
+  },
+  {
+   "id": "9924X",
+   "lat": 41.524722,
+   "lon": 0.355556,
+   "alt": 170,
+   "prov": "HUESCA",
+   "nom": "FRAGA"
+  }
+ ]
+}
