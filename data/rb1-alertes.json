@@ -1,16 +1,6 @@
 {
  "avis": [
   {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de vientos de nivel amarillo",
-   "niveau": "amarillo",
-   "gravite": "Moderate",
-   "debut": "2026-10-08T08:00:00+02:00",
-   "fin": "2026-10-08T19:59:59+02:00",
-   "titre": "Aviso de vientos de nivel amarillo. Ribera del Ebro de Zaragoza",
-   "description": "Rachas máximas: 70 km/h."
-  },
-  {
    "zone": "Pirineo oscense",
    "evenement": "Aviso de aludes de nivel verde",
    "niveau": "verde",
@@ -679,22 +669,22 @@
    ]
   },
   {
-   "route": "N-260a",
-   "pk": "515.0-516.0",
+   "route": "A-23",
+   "pk": "413.4-416.0",
    "gestion": "newRoadworksLayout",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-05-23T10:43",
+   "depuis": "2026-05-23T10:46",
    "province": "Huesca",
    "coords": [
     [
-     42.54703,
-     -0.34909785
+     42.54068,
+     -0.3978
     ],
     [
-     42.53986,
-     -0.35606816
+     42.54907,
+     -0.42510316
     ]
    ]
   },
@@ -719,22 +709,22 @@
    ]
   },
   {
-   "route": "A-23",
-   "pk": "413.4-416.0",
+   "route": "N-260a",
+   "pk": "515.0-516.0",
    "gestion": "newRoadworksLayout",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-05-23T10:46",
+   "depuis": "2026-05-23T10:43",
    "province": "Huesca",
    "coords": [
     [
-     42.54068,
-     -0.3978
+     42.54703,
+     -0.34909785
     ],
     [
-     42.54907,
-     -0.42510316
+     42.53986,
+     -0.35606816
     ]
    ]
   },
@@ -849,68 +839,8 @@
      -0.77235395
     ]
    ]
-  },
-  {
-   "route": "AP-2",
-   "pk": "28.5-29.5",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-10-08T08:18",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.556232,
-     -0.6082219
-    ],
-    [
-     41.55278,
-     -0.59736276
-    ]
-   ]
-  },
-  {
-   "route": "AP-2",
-   "pk": "22.5-21.7",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-10-08T08:18",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.582993,
-     -0.6665234
-    ],
-    [
-     41.58632,
-     -0.6750369
-    ]
-   ]
-  },
-  {
-   "route": "A-23",
-   "pk": "382.0-387.1",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-10-08T08:50",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.32106,
-     -0.42240536
-    ],
-    [
-     42.36094,
-     -0.38031903
-    ]
-   ]
   }
  ],
- "avis_maj": "2026-10-08T13:49Z",
- "routes_maj": "2026-10-08T13:49Z"
+ "avis_maj": "2026-10-08T20:43Z",
+ "routes_maj": "2026-10-08T20:43Z"
 }
