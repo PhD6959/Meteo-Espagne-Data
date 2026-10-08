@@ -1,0 +1,42 @@
+# Météo Espagne — mise à jour automatique des données
+# Version 1.0 — 8 octobre 2026 à 15:20
+# Toutes les 3 heures (minute 23 pour éviter l'heure pile) + lancement manuel possible.
+name: Mise à jour des données
+
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: maj-donnees
+  cancel-in-progress: false
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3
+      - name: Récupération AEMET + DGT
+        env:
+          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+        run: python scripts/maj_donnees.py
+      - name: Publication si changement
+        run: |
+          git config user.name "maj-automatique"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Aucun changement"
+          else
+            git commit -m "Données $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
