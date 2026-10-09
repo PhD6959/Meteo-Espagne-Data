@@ -2,11 +2,15 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.0 — 8 octobre 2026 à 15:20
+Version 1.1 — 9 octobre 2026 à 10:41 — ajout des observations horaires AEMET (mesures provisoires)
+  · data/rb1-obs-horaires.json : pluie horaire par station (prec = mm des 60 min précédant fint, UTC), 15 jours glissants
+  · exécution horaire ; historique quotidien, avis et DGT seulement toutes les 3 heures (ou si FORCER_TOUT=1)
+v1.0 — 8 octobre 2026 à 15:20
 
 Exécuté par GitHub Actions (.github/workflows/maj-donnees.yml). Produit :
   data/rb1-pluie.json    : historique quotidien AEMET par station (fusion des 15 derniers jours)
   data/rb1-alertes.json  : avis météo AEMET (Meteoalerta, zone Aragón) + incidences DGT dans la zone RB1
+  data/rb1-obs-horaires.json : observations horaires AEMET (/observacion/convencional/todas, 12 dernières heures)
   data/etat.json         : horodatage et erreurs éventuelles de la dernière exécution
 
 La clé AEMET est lue dans la variable d'environnement AEMET_API_KEY (secret GitHub),
@@ -158,6 +162,37 @@ def maj_pluie():
     print(f"AEMET : {ajouts} nouveaux jours-station")
 
 
+# ---------------------------------------------------------------- observations horaires (v1.1)
+JOURS_HORAIRES = 15
+
+def maj_obs_horaires():
+    """Pluie horaire des stations RB1. Métadonnées AEMET : prec = « Precipitación acumulada, medida por el
+    pluviómetro, durante los 60 minutos anteriores a la hora indicada por 'fint' (mm) », fint en UTC."""
+    ids = {s["id"] for s in charger("rb1-stations.json", {})["stations"]}
+    rep = aemet_get(f"{BASE_URL}/observacion/convencional/todas")
+    if rep is None:
+        raise RuntimeError("aucune donnée d'observation renvoyée")
+    obs = charger("rb1-obs-horaires.json", {"rb": "RB1", "unite": "mm sur les 60 min précédant l'heure (UTC)", "obs": {}})
+    limite = (datetime.now(timezone.utc) - timedelta(days=JOURS_HORAIRES)).strftime("%Y-%m-%dT%H:00Z")
+    nouv = 0
+    for o in rep.json():
+        sid = o.get("idema")
+        if sid not in ids or o.get("prec") is None or not o.get("fint"):
+            continue
+        h = o["fint"][:13] + ":00Z"          # 2026-10-09T07:00:00+0000 -> 2026-10-09T07:00Z
+        if h < limite:
+            continue
+        st = obs["obs"].setdefault(sid, {})
+        if h not in st:
+            nouv += 1
+        st[h] = round(float(o["prec"]), 1)
+    for sid in list(obs["obs"]):
+        obs["obs"][sid] = dict(sorted((h, v) for h, v in obs["obs"][sid].items() if h >= limite))
+    obs["maj"] = maintenant()
+    ecrire("rb1-obs-horaires.json", obs, compact=True)
+    print(f"Observations horaires : {nouv} nouvelles heures-station")
+
+
 # ---------------------------------------------------------------- avis Meteoalerta
 CAP_NS = {"cap": "urn:oasis:names:tc:emergency:cap:1.2"}
 
@@ -280,9 +315,23 @@ def maj_routes():
 
 
 def main():
+    tout = os.environ.get("FORCER_TOUT") == "1" or datetime.now(timezone.utc).hour % 3 == 0
     if not API_KEY:
-        erreurs.append("AEMET_API_KEY absente : historique et avis AEMET non mis à jour")
+        erreurs.append("AEMET_API_KEY absente : données AEMET non mises à jour")
     else:
+        try:
+            maj_obs_horaires()
+        except Exception as e:
+            erreurs.append(f"Observations horaires AEMET : {e}")
+    if not tout:            # passage horaire léger : observations seulement
+        etat = charger("etat.json", {})
+        etat["derniere_execution_horaire"] = maintenant()
+        etat["erreurs_horaire"] = erreurs
+        ecrire("etat.json", etat)
+        for e in erreurs:
+            print("⚠️", e)
+        sys.exit(1 if erreurs else 0)
+    if API_KEY:
         try:
             maj_pluie()
         except Exception as e:
@@ -300,11 +349,12 @@ def main():
     except Exception as e:
         erreurs.append(f"DGT : {e}")
     ecrire("rb1-alertes.json", alertes)
-    ecrire("etat.json", {"derniere_execution": maintenant(), "erreurs": erreurs})
+    ecrire("etat.json", {"derniere_execution": maintenant(), "erreurs": erreurs,
+                         "derniere_execution_horaire": maintenant(), "erreurs_horaire": []})
     for e in erreurs:
         print("⚠️", e)
-    # Échec du job seulement si rien n'a pu être mis à jour
-    sys.exit(1 if len(erreurs) >= 3 else 0)
+    # Échec du job seulement si presque rien n'a pu être mis à jour
+    sys.exit(1 if len(erreurs) >= 4 else 0)
 
 
 if __name__ == "__main__":
