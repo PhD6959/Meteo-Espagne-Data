@@ -1,5 +1,6 @@
 # Météo Espagne — mise à jour automatique des données
-# Version 1.1 — 9 octobre 2026 à 10:41 — exécution toutes les heures (mesures horaires AEMET)
+# Version 1.2 — 9 octobre 2026 à 10:53 — checkout v7 et setup-python v7 (Node 24), prêt pour Ubuntu 26.04
+# v1.1 — 9 octobre 2026 à 10:41 — exécution toutes les heures (mesures horaires AEMET)
 # v1.0 — 8 octobre 2026 à 15:20 — toutes les 3 heures
 # Toutes les heures (minute 23 pour éviter l'heure pile) : observations horaires AEMET.
 # Le script fait la mise à jour complète (bilans, avis, DGT) une heure sur trois, et à chaque lancement manuel.
@@ -22,8 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: pip install requests==2.32.3
