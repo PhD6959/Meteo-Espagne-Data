@@ -649,22 +649,22 @@
    ]
   },
   {
-   "route": "A-23",
-   "pk": "413.4-416.0",
-   "gestion": "newRoadworksLayout",
+   "route": "N-330",
+   "pk": "631.1-631.2",
+   "gestion": "laneClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-05-23T10:46",
+   "depuis": "2026-03-05T10:59",
    "province": "Huesca",
    "coords": [
     [
-     42.54068,
-     -0.3978
+     42.53749,
+     -0.3773081
     ],
     [
-     42.54907,
-     -0.42510316
+     42.5374,
+     -0.37852547
     ]
    ]
   },
@@ -709,22 +709,22 @@
    ]
   },
   {
-   "route": "N-330",
-   "pk": "631.1-631.2",
-   "gestion": "laneClosures",
+   "route": "A-23",
+   "pk": "413.4-416.0",
+   "gestion": "newRoadworksLayout",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-03-05T10:59",
+   "depuis": "2026-05-23T10:46",
    "province": "Huesca",
    "coords": [
     [
-     42.53749,
-     -0.3773081
+     42.54068,
+     -0.3978
     ],
     [
-     42.5374,
-     -0.37852547
+     42.54907,
+     -0.42510316
     ]
    ]
   },
@@ -841,6 +841,6 @@
    ]
   }
  ],
- "avis_maj": "2026-10-10T00:59Z",
- "routes_maj": "2026-10-10T00:59Z"
+ "avis_maj": "2026-10-10T18:42Z",
+ "routes_maj": "2026-10-10T18:42Z"
 }
