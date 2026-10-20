@@ -3,6 +3,8 @@
  "erreurs": [
   "AEMET station 9576C : clé API AEMET refusée (401)"
  ],
- "derniere_execution_horaire": "2026-10-20T20:41Z",
- "erreurs_horaire": []
+ "derniere_execution_horaire": "2026-10-20T23:57Z",
+ "erreurs_horaire": [
+  "Observations horaires AEMET : clé API AEMET refusée (401)"
+ ]
 }
