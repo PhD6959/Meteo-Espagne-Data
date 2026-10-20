@@ -1,9 +1,8 @@
 {
- "derniere_execution": "2026-10-19T21:09Z",
+ "derniere_execution": "2026-10-20T00:26Z",
  "erreurs": [
-  "AEMET station 9576C : clé API AEMET refusée (401)",
-  "AEMET station 9901X : clé API AEMET refusée (401)"
+  "AEMET station 9866C : clé API AEMET refusée (401)"
  ],
- "derniere_execution_horaire": "2026-10-19T21:09Z",
+ "derniere_execution_horaire": "2026-10-20T00:26Z",
  "erreurs_horaire": []
 }
