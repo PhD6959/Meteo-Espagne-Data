@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.1 — 9 octobre 2026 à 10:41 — ajout des observations horaires AEMET (mesures provisoires)
+Version 1.2 — 21 octobre 2026 à 07:40 — 401 AEMET intermittents : nouvel essai avant d'abandonner
+  · un 401 isolé (clé pourtant valide, constaté 14 fois du 16 au 21/10) est retenté 2 fois après 20 s puis 40 s
+  · seul un 401 persistant sur les 3 essais lève l'erreur « clé API AEMET refusée (401) »
+v1.1 — 9 octobre 2026 à 10:41 — ajout des observations horaires AEMET (mesures provisoires)
   · data/rb1-obs-horaires.json : pluie horaire par station (prec = mm des 60 min précédant fint, UTC), 15 jours glissants
   · exécution horaire ; historique quotidien, avis et DGT seulement toutes les 3 heures (ou si FORCER_TOUT=1)
 v1.0 — 8 octobre 2026 à 15:20
@@ -84,6 +87,10 @@ def aemet_get(url, essais=3):
                 time.sleep(30 * (essai + 1))
                 continue
             if r.status_code == 401:
+                # AEMET renvoie parfois un 401 isolé avec une clé valide : on retente avant d'abandonner
+                if essai < essais - 1:
+                    time.sleep(20 * (essai + 1))
+                    continue
                 raise RuntimeError("clé API AEMET refusée (401)")
             if r.status_code == 404:
                 return None
