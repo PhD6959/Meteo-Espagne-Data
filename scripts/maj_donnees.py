@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.2 — 22 octobre 2026 à 18:42 — mise à jour complète déclenchée par l'ancienneté de la précédente
+Version 1.3 — 22 octobre 2026 à 18:58 — nouvel essai sur refus AEMET (HTTP 401)
+  · AEMET renvoie parfois 401 au hasard avec une clé valide (13 stations sur 67 le 22/10/2026 côté ancien
+    outil) : jusqu'à 3 nouveaux essais espacés (10, 20, 30 s) avant de compter l'erreur
+v1.2 — 22 octobre 2026 à 18:42 — mise à jour complète déclenchée par l'ancienneté de la précédente
   · GitHub saute une grande partie des lancements programmés (~5 par jour au lieu de 24) : la mise à jour
     complète ne dépend plus de l'heure du lancement (heure UTC multiple de 3) mais se fait dès que la
     précédente date d'au moins 2 h 50 (ou si FORCER_TOUT=1, ou si etat.json est absent/illisible)
@@ -79,16 +82,26 @@ def ecrire(nom, obj, compact=False):
             json.dump(obj, f, ensure_ascii=False, indent=1)
 
 
+RETRY_401 = 3   # v1.3 : nouveaux essais après un refus 401 (pauses de 10, 20, 30 s)
+
+
 def aemet_get(url, essais=3):
-    """Appel AEMET en deux temps (URL de données puis données), avec gestion du 429."""
-    for essai in range(essais):
+    """Appel AEMET en deux temps (URL de données puis données), avec gestion du 429 et des 401 isolés."""
+    refus = 0
+    essai = 0
+    while essai < essais:
         try:
             r = requests.get(url, headers={"api_key": API_KEY}, timeout=30)
+            if r.status_code == 401:
+                if refus < RETRY_401:
+                    refus += 1
+                    time.sleep(10 * refus)
+                    continue          # un refus 401 ne consomme pas d'essai réseau
+                raise RuntimeError(f"clé API AEMET refusée (401, {refus + 1} essais)")
             if r.status_code == 429:
                 time.sleep(30 * (essai + 1))
+                essai += 1
                 continue
-            if r.status_code == 401:
-                raise RuntimeError("clé API AEMET refusée (401)")
             if r.status_code == 404:
                 return None
             r.raise_for_status()
@@ -104,6 +117,7 @@ def aemet_get(url, essais=3):
         except Exception as e:  # réseau, JSON, etc.
             if essai == essais - 1:
                 raise
+            essai += 1
             time.sleep(5)
     return None
 
