@@ -2,13 +2,18 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.3 — 22 octobre 2026 à 18:58 — nouvel essai sur refus AEMET (HTTP 401)
+Version 1.4 — 22 octobre 2026 à 21:19 — rétablit le plafond de 12 nouveaux essais 401 par exécution,
+  absent de la v1.3 effectivement publiée (commit 8f406ba)
+v1.3 — 22 octobre 2026 à 18:58 — nouvel essai sur refus AEMET (HTTP 401)
   · AEMET renvoie parfois 401 au hasard avec une clé valide (13 stations sur 67 le 22/10/2026 côté ancien
-    outil) : jusqu'à 3 nouveaux essais espacés (10, 20, 30 s) avant de compter l'erreur
+    outil) : jusqu'à 3 nouveaux essais espacés (10, 20, 30 s) avant de compter l'erreur,
+    dans la limite de 12 nouveaux essais par exécution
 v1.2 — 22 octobre 2026 à 18:42 — mise à jour complète déclenchée par l'ancienneté de la précédente
   · GitHub saute une grande partie des lancements programmés (~5 par jour au lieu de 24) : la mise à jour
     complète ne dépend plus de l'heure du lancement (heure UTC multiple de 3) mais se fait dès que la
     précédente date d'au moins 2 h 50 (ou si FORCER_TOUT=1, ou si etat.json est absent/illisible)
+v1.2 (première) — 21 octobre 2026 à 07:40 — nouvel essai sur les 401 (20 s puis 40 s), commit a539fa6 ;
+  écrasée par erreur par la v1.2 du 22/10 ci-dessus (préparée à partir de la v1.1), le principe est repris en v1.3
 v1.1 — 9 octobre 2026 à 10:41 — ajout des observations horaires AEMET (mesures provisoires)
   · data/rb1-obs-horaires.json : pluie horaire par station (prec = mm des 60 min précédant fint, UTC), 15 jours glissants
   · exécution horaire ; historique quotidien, avis et DGT au plus toutes les 3 heures (ou si FORCER_TOUT=1)
@@ -83,6 +88,8 @@ def ecrire(nom, obj, compact=False):
 
 
 RETRY_401 = 3   # v1.3 : nouveaux essais après un refus 401 (pauses de 10, 20, 30 s)
+budget_401 = [12]  # v1.4 : plafond de nouveaux essais 401 par exécution (≈ 4 min de pauses au plus),
+                   # pour rester loin du délai de 20 min de la tâche GitHub si la clé est vraiment refusée
 
 
 def aemet_get(url, essais=3):
@@ -93,8 +100,9 @@ def aemet_get(url, essais=3):
         try:
             r = requests.get(url, headers={"api_key": API_KEY}, timeout=30)
             if r.status_code == 401:
-                if refus < RETRY_401:
+                if refus < RETRY_401 and budget_401[0] > 0:
                     refus += 1
+                    budget_401[0] -= 1
                     time.sleep(10 * refus)
                     continue          # un refus 401 ne consomme pas d'essai réseau
                 raise RuntimeError(f"clé API AEMET refusée (401, {refus + 1} essais)")
