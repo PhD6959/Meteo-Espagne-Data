@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.2 — 21 octobre 2026 à 07:40 — 401 AEMET intermittents : nouvel essai avant d'abandonner
-  · un 401 isolé (clé pourtant valide, constaté 14 fois du 16 au 21/10) est retenté 2 fois après 20 s puis 40 s
-  · seul un 401 persistant sur les 3 essais lève l'erreur « clé API AEMET refusée (401) »
+Version 1.2 — 22 octobre 2026 à 18:42 — mise à jour complète déclenchée par l'ancienneté de la précédente
+  · GitHub saute une grande partie des lancements programmés (~5 par jour au lieu de 24) : la mise à jour
+    complète ne dépend plus de l'heure du lancement (heure UTC multiple de 3) mais se fait dès que la
+    précédente date d'au moins 2 h 50 (ou si FORCER_TOUT=1, ou si etat.json est absent/illisible)
 v1.1 — 9 octobre 2026 à 10:41 — ajout des observations horaires AEMET (mesures provisoires)
   · data/rb1-obs-horaires.json : pluie horaire par station (prec = mm des 60 min précédant fint, UTC), 15 jours glissants
-  · exécution horaire ; historique quotidien, avis et DGT seulement toutes les 3 heures (ou si FORCER_TOUT=1)
+  · exécution horaire ; historique quotidien, avis et DGT au plus toutes les 3 heures (ou si FORCER_TOUT=1)
 v1.0 — 8 octobre 2026 à 15:20
 
 Exécuté par GitHub Actions (.github/workflows/maj-donnees.yml). Produit :
@@ -87,10 +88,6 @@ def aemet_get(url, essais=3):
                 time.sleep(30 * (essai + 1))
                 continue
             if r.status_code == 401:
-                # AEMET renvoie parfois un 401 isolé avec une clé valide : on retente avant d'abandonner
-                if essai < essais - 1:
-                    time.sleep(20 * (essai + 1))
-                    continue
                 raise RuntimeError("clé API AEMET refusée (401)")
             if r.status_code == 404:
                 return None
@@ -321,8 +318,20 @@ def maj_routes():
     return routes
 
 
+DELAI_COMPLET = timedelta(hours=2, minutes=50)   # marge de 10 min sous 3 h pour absorber les retards de lancement
+
+
+def complet_du():
+    """Vrai si la dernière mise à jour complète date d'au moins DELAI_COMPLET (ou est inconnue)."""
+    try:
+        der = datetime.strptime(charger("etat.json", {}).get("derniere_execution", ""), "%Y-%m-%dT%H:%MZ")
+    except (ValueError, TypeError, json.JSONDecodeError):
+        return True
+    return datetime.now(timezone.utc) - der.replace(tzinfo=timezone.utc) >= DELAI_COMPLET
+
+
 def main():
-    tout = os.environ.get("FORCER_TOUT") == "1" or datetime.now(timezone.utc).hour % 3 == 0
+    tout = os.environ.get("FORCER_TOUT") == "1" or complet_du()
     if not API_KEY:
         erreurs.append("AEMET_API_KEY absente : données AEMET non mises à jour")
     else:
