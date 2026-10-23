@@ -589,26 +589,6 @@
    ]
   },
   {
-   "route": "A-1603",
-   "pk": "8.0-10.0",
-   "gestion": "roadClosed",
-   "cause": "infrastructureDamageObstruction",
-   "detail": null,
-   "gravite": "highest",
-   "depuis": "2026-09-16T13:04",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.504585,
-     -0.63761276
-    ],
-    [
-     42.50657,
-     -0.6578563
-    ]
-   ]
-  },
-  {
    "route": "A-135",
    "pk": "4.8-9.56",
    "gestion": "carriagewayClosures",
@@ -669,26 +649,6 @@
    ]
   },
   {
-   "route": "A-23",
-   "pk": "413.4-416.0",
-   "gestion": "newRoadworksLayout",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-05-23T10:46",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.54068,
-     -0.3978
-    ],
-    [
-     42.54907,
-     -0.42510316
-    ]
-   ]
-  },
-  {
    "route": "N-330",
    "pk": "631.1-631.2",
    "gestion": "laneClosures",
@@ -705,6 +665,26 @@
     [
      42.5374,
      -0.37852547
+    ]
+   ]
+  },
+  {
+   "route": "A-23",
+   "pk": "413.4-416.0",
+   "gestion": "newRoadworksLayout",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-05-23T10:46",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.54068,
+     -0.3978
+    ],
+    [
+     42.54907,
+     -0.42510316
     ]
    ]
   },
@@ -823,26 +803,6 @@
   {
    "route": "A-68",
    "pk": "224.0-225.0",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-10-16T14:03",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.579872,
-     -0.7642505
-    ],
-    [
-     41.58291,
-     -0.77235395
-    ]
-   ]
-  },
-  {
-   "route": "A-68",
-   "pk": "224.0-225.0",
    "gestion": "useOfSpecifiedLanesOrCarriagewaysAllowed",
    "cause": "roadMaintenance",
    "detail": "roadworks",
@@ -861,22 +821,26 @@
    ]
   },
   {
-   "route": "A-22",
-   "pk": "",
+   "route": "A-68",
+   "pk": "224.0-225.0",
    "gestion": "laneClosures",
-   "cause": "vehicleObstruction",
-   "detail": null,
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-22T23:30",
-   "province": "Huesca",
+   "depuis": "2026-10-16T14:03",
+   "province": "Zaragoza",
    "coords": [
     [
-     42.093307,
-     -0.105284885
+     41.579872,
+     -0.7642505
+    ],
+    [
+     41.58291,
+     -0.77235395
     ]
    ]
   }
  ],
  "avis_maj": "2026-10-23T13:36Z",
- "routes_maj": "2026-10-23T13:36Z"
+ "routes_maj": "2026-10-23T18:31Z"
 }

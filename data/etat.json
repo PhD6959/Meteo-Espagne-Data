@@ -1,6 +1,9 @@
 {
- "derniere_execution": "2026-10-23T13:36Z",
- "erreurs": [],
- "derniere_execution_horaire": "2026-10-23T13:36Z",
+ "derniere_execution": "2026-10-23T18:31Z",
+ "erreurs": [
+  "AEMET station 9918Y : clé API AEMET refusée (401, 2 essais)",
+  "Avis AEMET : clé API AEMET refusée (401, 1 essais)"
+ ],
+ "derniere_execution_horaire": "2026-10-23T18:31Z",
  "erreurs_horaire": []
 }
