@@ -3,6 +3,6 @@
  "erreurs": [
   "AEMET station 9924X : clé API AEMET refusée (401, 2 essais)"
  ],
- "derniere_execution_horaire": "2026-10-24T18:17Z",
+ "derniere_execution_horaire": "2026-10-24T20:57Z",
  "erreurs_horaire": []
 }
