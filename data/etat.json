@@ -1,6 +1,8 @@
 {
- "derniere_execution": "2026-10-26T14:24Z",
- "erreurs": [],
- "derniere_execution_horaire": "2026-10-26T14:24Z",
+ "derniere_execution": "2026-10-26T20:04Z",
+ "erreurs": [
+  "Avis AEMET : clé API AEMET refusée (401, 1 essais)"
+ ],
+ "derniere_execution_horaire": "2026-10-26T20:04Z",
  "erreurs_horaire": []
 }
