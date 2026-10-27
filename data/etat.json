@@ -1,6 +1,8 @@
 {
- "derniere_execution": "2026-10-27T05:18Z",
- "erreurs": [],
- "derniere_execution_horaire": "2026-10-27T05:18Z",
+ "derniere_execution": "2026-10-27T10:44Z",
+ "erreurs": [
+  "AEMET station 9924X : clé API AEMET refusée (401, 1 essais)"
+ ],
+ "derniere_execution_horaire": "2026-10-27T10:44Z",
  "erreurs_horaire": []
 }
