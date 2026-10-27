@@ -1,24 +1,20 @@
 {
- "derniere_execution": "2026-10-27T16:50Z",
+ "derniere_execution": "2026-10-27T21:29Z",
  "erreurs": [
-  "Observations horaires AEMET : clé API AEMET refusée (401, 4 essais)",
-  "AEMET station 9491X : clé API AEMET refusée (401, 4 essais)",
+  "Observations horaires AEMET : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/59ef7d21",
+  "AEMET station 9491X : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/da852363",
   "AEMET station 9495Y : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/df189e5e",
-  "AEMET station 9808X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9843A : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9843A : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9855E : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9866C : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/9d47e102",
-  "AEMET station 9866C : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9894Y : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9898 : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9901X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9911X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9918Y : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9918Y : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9924X : clé API AEMET refusée (401, 1 essais)",
-  "Avis AEMET : clé API AEMET refusée (401, 1 essais)"
+  "AEMET station 9808X : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/ffc854b4",
+  "AEMET station 9855E : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/b86e5c3c",
+  "AEMET station 9894Y : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/4e8555a7",
+  "AEMET station 9898 : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/ae59b706",
+  "AEMET station 9901X : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/dce9b4ac",
+  "AEMET station 9908X : clé API AEMET refusée (401, 2 essais)",
+  "AEMET station 9908X : clé API AEMET refusée (401, 1 essais)",
+  "AEMET station 9911X : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/3a6672df",
+  "AEMET station 9924X : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/b6762d5a",
+  "Avis AEMET : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/7aad32aaZ_CAP_C_LEMM_20261026225002_AFAC62"
  ],
- "derniere_execution_horaire": "2026-10-27T16:50Z",
+ "derniere_execution_horaire": "2026-10-27T21:29Z",
  "erreurs_horaire": []
 }
