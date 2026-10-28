@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.5 — 28 octobre 2026 à 06:57 — AEMET très instable depuis le 27/10 (erreurs 500 et 401)
+Version 1.6 — 28 octobre 2026 à 08:08 — avis Meteoalerta mieux protégés
+  · avis récupérés juste après les observations horaires, avant les stations (ils profitent des nouveaux essais 401)
+  · un échec des avis ne fait échouer la tâche que si les derniers avis obtenus ont plus de 12 h (AVIS_TOLERANCE)
+v1.5 — 28 octobre 2026 à 06:57 — AEMET très instable depuis le 27/10 (erreurs 500 et 401)
   · cadence limitée à 30 requêtes AEMET par minute (FAQ AEMET OpenData §3.5 : 40 connexions/minute/utilisateur)
   · nouvel essai sur les erreurs serveur (5xx) avec pauses de 15 puis 30 s, plafonné à 10 par exécution
   · etat.json : erreurs_horaire reflète enfin les échecs des observations horaires lors d'une mise à jour complète
@@ -366,6 +369,18 @@ def maj_routes():
     return routes
 
 
+AVIS_TOLERANCE = timedelta(hours=12)   # v1.6 : âge maximal des avis avant qu'un échec soit bloquant
+
+
+def trop_vieux(horodatage, tolerance):
+    """Vrai si l'horodatage « AAAA-MM-JJTHH:MMZ » est absent, illisible ou plus vieux que la tolérance."""
+    try:
+        t = datetime.strptime(horodatage or "", "%Y-%m-%dT%H:%MZ").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return True
+    return datetime.now(timezone.utc) - t > tolerance
+
+
 DELAI_COMPLET = timedelta(hours=2, minutes=50)   # marge de 10 min sous 3 h pour absorber les retards de lancement
 
 
@@ -399,6 +414,17 @@ def main():
         for e in erreurs:
             print("⚠️", e)
         sys.exit(1 if critique else 0)
+    alertes = charger("rb1-alertes.json", {"avis": [], "routes": []})
+    if API_KEY:             # v1.6 : avis avant les stations, pour qu'ils profitent des nouveaux essais 401
+        try:
+            alertes["avis"] = maj_avis()
+            alertes["avis_maj"] = maintenant()
+        except Exception as e:
+            erreurs.append(f"Avis AEMET : {e}")
+            if trop_vieux(alertes.get("avis_maj"), AVIS_TOLERANCE):
+                critique.append("avis (derniers obtenus il y a plus de 12 h)")
+            else:
+                print(f"ℹ️  Avis non mis à jour, derniers obtenus le {alertes.get('avis_maj')} : échec non bloquant")
     if API_KEY:
         try:
             sans, total = maj_pluie()
@@ -407,14 +433,6 @@ def main():
         except Exception as e:
             erreurs.append(f"Historique AEMET : {e}")
             critique.append("historique")
-    alertes = charger("rb1-alertes.json", {"avis": [], "routes": []})
-    if API_KEY:
-        try:
-            alertes["avis"] = maj_avis()
-            alertes["avis_maj"] = maintenant()
-        except Exception as e:
-            erreurs.append(f"Avis AEMET : {e}")
-            critique.append("avis")
     try:
         alertes["routes"] = maj_routes()
         alertes["routes_maj"] = maintenant()
@@ -428,7 +446,7 @@ def main():
         print("⚠️", e)
     if critique:
         print("❌ Échec :", ", ".join(critique))
-    # v1.5 : échec seulement si observations, avis ou DGT échouent, ou si plus de la moitié des stations RB1 manquent
+    # v1.5/1.6 : échec seulement si observations ou DGT échouent, avis de plus de 12 h, ou si plus de la moitié des stations RB1 manquent
     sys.exit(1 if critique else 0)
 
 
