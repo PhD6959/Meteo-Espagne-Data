@@ -2,7 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.4 — 22 octobre 2026 à 21:19 — rétablit le plafond de 12 nouveaux essais 401 par exécution,
+Version 1.5 — 28 octobre 2026 à 06:57 — AEMET très instable depuis le 27/10 (erreurs 500 et 401)
+  · cadence limitée à 30 requêtes AEMET par minute (FAQ AEMET OpenData §3.5 : 40 connexions/minute/utilisateur)
+  · nouvel essai sur les erreurs serveur (5xx) avec pauses de 15 puis 30 s, plafonné à 10 par exécution
+  · etat.json : erreurs_horaire reflète enfin les échecs des observations horaires lors d'une mise à jour complète
+  · échec de la tâche (et mail GitHub) seulement si : observations horaires, avis ou DGT en échec,
+    ou plus de la moitié des stations RB1 sans données
+v1.4 — 22 octobre 2026 à 21:19 — rétablit le plafond de 12 nouveaux essais 401 par exécution,
   absent de la v1.3 effectivement publiée (commit 8f406ba)
 v1.3 — 22 octobre 2026 à 18:58 — nouvel essai sur refus AEMET (HTTP 401)
   · AEMET renvoie parfois 401 au hasard avec une clé valide (13 stations sur 67 le 22/10/2026 côté ancien
@@ -87,6 +93,22 @@ def ecrire(nom, obj, compact=False):
             json.dump(obj, f, ensure_ascii=False, indent=1)
 
 
+INTERVALLE_AEMET = 2.0   # v1.5 : secondes minimum entre deux requêtes AEMET (≤ 30/min, limite AEMET 40/min)
+_derniere_requete = [0.0]
+budget_5xx = [10]        # v1.5 : plafond de nouveaux essais sur erreur serveur AEMET par exécution
+
+
+def get_aemet(url, **kw):
+    """requests.get vers AEMET en respectant INTERVALLE_AEMET entre deux requêtes (API et URL de données)."""
+    attente = _derniere_requete[0] + INTERVALLE_AEMET - time.monotonic()
+    if attente > 0:
+        time.sleep(attente)
+    try:
+        return requests.get(url, **kw)
+    finally:
+        _derniere_requete[0] = time.monotonic()
+
+
 RETRY_401 = 3   # v1.3 : nouveaux essais après un refus 401 (pauses de 10, 20, 30 s)
 budget_401 = [12]  # v1.4 : plafond de nouveaux essais 401 par exécution (≈ 4 min de pauses au plus),
                    # pour rester loin du délai de 20 min de la tâche GitHub si la clé est vraiment refusée
@@ -98,7 +120,7 @@ def aemet_get(url, essais=3):
     essai = 0
     while essai < essais:
         try:
-            r = requests.get(url, headers={"api_key": API_KEY}, timeout=30)
+            r = get_aemet(url, headers={"api_key": API_KEY}, timeout=30)
             if r.status_code == 401:
                 if refus < RETRY_401 and budget_401[0] > 0:
                     refus += 1
@@ -116,17 +138,19 @@ def aemet_get(url, essais=3):
             meta = r.json()
             if "datos" not in meta:
                 return None
-            time.sleep(0.5)
-            d = requests.get(meta["datos"], timeout=60)
+            d = get_aemet(meta["datos"], timeout=60)
             d.raise_for_status()
             return d
         except RuntimeError:
             raise
-        except Exception as e:  # réseau, JSON, etc.
-            if essai == essais - 1:
+        except Exception as e:  # réseau, JSON, erreurs serveur 5xx, etc.
+            serveur = isinstance(e, requests.HTTPError) and e.response is not None and e.response.status_code >= 500
+            if essai == essais - 1 or (serveur and budget_5xx[0] <= 0):
                 raise
+            if serveur:
+                budget_5xx[0] -= 1
             essai += 1
-            time.sleep(5)
+            time.sleep(15 * essai if serveur else 5)
     return None
 
 
@@ -151,6 +175,7 @@ def maj_pluie():
     fi = f"{debut:%Y-%m-%d}T00:00:00UTC"
     ff = f"{fin:%Y-%m-%d}T23:59:59UTC"
     ajouts = 0
+    sans_donnees = 0
     for s in stations:
         sid = s["id"]
         variantes = [sid]
@@ -163,7 +188,6 @@ def maj_pluie():
             except Exception as e:
                 erreurs.append(f"AEMET station {sid} : {e}")
                 rep = None
-            time.sleep(1)
             if rep is not None:
                 try:
                     lignes = rep.json()
@@ -172,6 +196,7 @@ def maj_pluie():
             if lignes:
                 break
         if not lignes:
+            sans_donnees += 1
             continue
         obs = pluie["obs"].setdefault(sid, {})
         for l in lignes:
@@ -185,7 +210,8 @@ def maj_pluie():
         pluie["obs"][sid] = dict(sorted(obs.items()))
     pluie["maj"] = maintenant()
     ecrire("rb1-pluie.json", pluie, compact=True)
-    print(f"AEMET : {ajouts} nouveaux jours-station")
+    print(f"AEMET : {ajouts} nouveaux jours-station, {sans_donnees} station(s) sans données sur {len(stations)}")
+    return sans_donnees, len(stations)
 
 
 # ---------------------------------------------------------------- observations horaires (v1.1)
@@ -354,26 +380,33 @@ def complet_du():
 
 def main():
     tout = os.environ.get("FORCER_TOUT") == "1" or complet_du()
+    critique = []           # v1.5 : échecs qui justifient un échec de la tâche (et un mail GitHub)
     if not API_KEY:
         erreurs.append("AEMET_API_KEY absente : données AEMET non mises à jour")
+        critique.append("clé absente")
     else:
         try:
             maj_obs_horaires()
         except Exception as e:
             erreurs.append(f"Observations horaires AEMET : {e}")
+            critique.append("observations horaires")
+    erreurs_horaire = list(erreurs)
     if not tout:            # passage horaire léger : observations seulement
         etat = charger("etat.json", {})
         etat["derniere_execution_horaire"] = maintenant()
-        etat["erreurs_horaire"] = erreurs
+        etat["erreurs_horaire"] = erreurs_horaire
         ecrire("etat.json", etat)
         for e in erreurs:
             print("⚠️", e)
-        sys.exit(1 if erreurs else 0)
+        sys.exit(1 if critique else 0)
     if API_KEY:
         try:
-            maj_pluie()
+            sans, total = maj_pluie()
+            if sans * 2 > total:
+                critique.append(f"historique : {sans} stations sur {total} sans données")
         except Exception as e:
             erreurs.append(f"Historique AEMET : {e}")
+            critique.append("historique")
     alertes = charger("rb1-alertes.json", {"avis": [], "routes": []})
     if API_KEY:
         try:
@@ -381,18 +414,22 @@ def main():
             alertes["avis_maj"] = maintenant()
         except Exception as e:
             erreurs.append(f"Avis AEMET : {e}")
+            critique.append("avis")
     try:
         alertes["routes"] = maj_routes()
         alertes["routes_maj"] = maintenant()
     except Exception as e:
         erreurs.append(f"DGT : {e}")
+        critique.append("DGT")
     ecrire("rb1-alertes.json", alertes)
     ecrire("etat.json", {"derniere_execution": maintenant(), "erreurs": erreurs,
-                         "derniere_execution_horaire": maintenant(), "erreurs_horaire": []})
+                         "derniere_execution_horaire": maintenant(), "erreurs_horaire": erreurs_horaire})
     for e in erreurs:
         print("⚠️", e)
-    # Échec du job seulement si presque rien n'a pu être mis à jour
-    sys.exit(1 if len(erreurs) >= 4 else 0)
+    if critique:
+        print("❌ Échec :", ", ".join(critique))
+    # v1.5 : échec seulement si observations, avis ou DGT échouent, ou si plus de la moitié des stations RB1 manquent
+    sys.exit(1 if critique else 0)
 
 
 if __name__ == "__main__":
