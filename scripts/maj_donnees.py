@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.6 — 28 octobre 2026 à 08:08 — avis Meteoalerta mieux protégés
+Version 1.7 — 29 octobre 2026 à 06:24 — moins de requêtes AEMET et règle d'échec corrigée
+  · historique : seules les stations en retard sont interrogées (dernier jour < aujourd'hui − RETARD_AEMET_JOURS) ;
+    toutes les stations restent rafraîchies une fois par jour (UTC), au cas où AEMET corrige des valeurs
+  · règle d'échec : les stations sans aucun historique (ex. Bujaraloz 9576C) ne comptent plus ; échec si plus
+    de la moitié des stations ayant un historique ont 2 jours ou plus de retard sur la station la plus à jour
+v1.6 — 28 octobre 2026 à 08:08 — avis Meteoalerta mieux protégés
   · avis récupérés juste après les observations horaires, avant les stations (ils profitent des nouveaux essais 401)
   · un échec des avis ne fait échouer la tâche que si les derniers avis obtenus ont plus de 12 h (AVIS_TOLERANCE)
 v1.5 — 28 octobre 2026 à 06:57 — AEMET très instable depuis le 27/10 (erreurs 500 et 401)
@@ -170,6 +175,9 @@ def nombre(v, prec=False):
 
 
 # ---------------------------------------------------------------- historique AEMET
+RETARD_AEMET_JOURS = 4   # v1.7 : décalage de publication AEMET (« retardo de 4 días », métadonnées AEMET)
+
+
 def maj_pluie():
     stations = charger("rb1-stations.json", {})["stations"]
     pluie = charger("rb1-pluie.json", {"rb": "RB1", "champs": ["prec_mm", "tmin", "tmax"], "obs": {}})
@@ -177,10 +185,17 @@ def maj_pluie():
     debut = fin - timedelta(days=JOURS_A_RAFRAICHIR)
     fi = f"{debut:%Y-%m-%d}T00:00:00UTC"
     ff = f"{fin:%Y-%m-%d}T23:59:59UTC"
+    cible = f"{fin - timedelta(days=RETARD_AEMET_JOURS):%Y-%m-%d}"
+    tout_rafraichir = pluie.get("rafraichi_le") != f"{fin:%Y-%m-%d}"   # v1.7 : une fois par jour, toutes les stations
     ajouts = 0
-    sans_donnees = 0
+    demandees = 0
+    reussies = True
     for s in stations:
         sid = s["id"]
+        hist = pluie["obs"].get(sid) or {}
+        if not tout_rafraichir and hist and max(hist) >= cible:
+            continue            # v1.7 : déjà à jour, inutile d'interroger AEMET
+        demandees += 1
         variantes = [sid]
         if sid[-1].isalpha():  # même logique que aemet_tracker.py
             variantes.append(sid.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
@@ -199,7 +214,8 @@ def maj_pluie():
             if lignes:
                 break
         if not lignes:
-            sans_donnees += 1
+            if hist:
+                reussies = False
             continue
         obs = pluie["obs"].setdefault(sid, {})
         for l in lignes:
@@ -211,10 +227,19 @@ def maj_pluie():
                 ajouts += 1
             obs[date] = val
         pluie["obs"][sid] = dict(sorted(obs.items()))
+    if tout_rafraichir and reussies:
+        pluie["rafraichi_le"] = f"{fin:%Y-%m-%d}"
     pluie["maj"] = maintenant()
     ecrire("rb1-pluie.json", pluie, compact=True)
-    print(f"AEMET : {ajouts} nouveaux jours-station, {sans_donnees} station(s) sans données sur {len(stations)}")
-    return sans_donnees, len(stations)
+    # v1.7 : retard de chaque station ayant un historique, par rapport à la station la plus à jour
+    derniers = {sid: max(o) for sid, o in pluie["obs"].items() if o}
+    en_retard = 0
+    if derniers:
+        ref = datetime.strptime(max(derniers.values()), "%Y-%m-%d").date()
+        en_retard = sum(1 for d in derniers.values() if (ref - datetime.strptime(d, "%Y-%m-%d").date()).days >= 2)
+    print(f"AEMET : {demandees} station(s) interrogée(s){' (rafraîchissement du jour)' if tout_rafraichir else ''}, "
+          f"{ajouts} nouveaux jours-station, {en_retard} station(s) sur {len(derniers)} avec 2 jours ou plus de retard")
+    return en_retard, len(derniers)
 
 
 # ---------------------------------------------------------------- observations horaires (v1.1)
@@ -427,9 +452,9 @@ def main():
                 print(f"ℹ️  Avis non mis à jour, derniers obtenus le {alertes.get('avis_maj')} : échec non bloquant")
     if API_KEY:
         try:
-            sans, total = maj_pluie()
-            if sans * 2 > total:
-                critique.append(f"historique : {sans} stations sur {total} sans données")
+            retard, total = maj_pluie()
+            if retard * 2 > total:
+                critique.append(f"historique : {retard} stations sur {total} avec 2 jours ou plus de retard")
         except Exception as e:
             erreurs.append(f"Historique AEMET : {e}")
             critique.append("historique")
@@ -446,7 +471,7 @@ def main():
         print("⚠️", e)
     if critique:
         print("❌ Échec :", ", ".join(critique))
-    # v1.5/1.6 : échec seulement si observations ou DGT échouent, avis de plus de 12 h, ou si plus de la moitié des stations RB1 manquent
+    # v1.5→1.7 : échec si observations ou DGT échouent, avis de plus de 12 h, ou plus de la moitié des stations en retard, ou si plus de la moitié des stations RB1 manquent
     sys.exit(1 if critique else 0)
 
 
