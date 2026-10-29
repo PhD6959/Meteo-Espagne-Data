@@ -610,26 +610,6 @@
   },
   {
    "route": "N-330",
-   "pk": "632.85-630.5",
-   "gestion": "newRoadworksLayout",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2025-10-17T13:38",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.540215,
-     -0.3969102
-    ],
-    [
-     42.534897,
-     -0.37122956
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
    "pk": "631.1-631.2",
    "gestion": "laneClosures",
    "cause": "roadMaintenance",
@@ -645,6 +625,26 @@
     [
      42.5374,
      -0.37852547
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "632.85-630.5",
+   "gestion": "newRoadworksLayout",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2025-10-17T13:38",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.540215,
+     -0.3969102
+    ],
+    [
+     42.534897,
+     -0.37122956
     ]
    ]
   },
@@ -763,6 +763,26 @@
   {
    "route": "A-68",
    "pk": "225.0-224.0",
+   "gestion": "carriagewayClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-10-15T11:56",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.58291,
+     -0.77235395
+    ],
+    [
+     41.57997,
+     -0.76419955
+    ]
+   ]
+  },
+  {
+   "route": "A-68",
+   "pk": "225.0-224.0",
    "gestion": "useOfSpecifiedLanesOrCarriagewaysAllowed",
    "cause": "roadMaintenance",
    "detail": "roadworks",
@@ -801,22 +821,42 @@
    ]
   },
   {
-   "route": "A-68",
-   "pk": "225.0-224.0",
-   "gestion": "carriagewayClosures",
+   "route": "A-140",
+   "pk": "17.6-15.2",
+   "gestion": "singleAlternateLineTraffic",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-15T11:56",
-   "province": "Zaragoza",
+   "depuis": "2026-10-29T08:35",
+   "province": "Huesca",
    "coords": [
     [
-     41.58291,
-     -0.77235395
+     41.85369,
+     0.37200972
     ],
     [
-     41.57997,
-     -0.76419955
+     41.86017,
+     0.3997752
+    ]
+   ]
+  },
+  {
+   "route": "A-140",
+   "pk": "15.2-17.6",
+   "gestion": "singleAlternateLineTraffic",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-10-29T08:35",
+   "province": "Huesca",
+   "coords": [
+    [
+     41.86017,
+     0.3997752
+    ],
+    [
+     41.85369,
+     0.37200972
     ]
    ]
   },
@@ -842,21 +882,41 @@
   },
   {
    "route": "N-330",
-   "pk": "623.5-622.5",
+   "pk": "616.5-615.0",
    "gestion": "intermittentShortTermClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-26T08:02",
+   "depuis": "2026-10-26T08:01",
    "province": "Huesca",
    "coords": [
     [
-     42.491436,
-     -0.36864796
+     42.43567,
+     -0.39653024
     ],
     [
-     42.48421,
-     -0.37606066
+     42.42269,
+     -0.39611152
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "621.1-617.5",
+   "gestion": "intermittentShortTermClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-10-26T08:01",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.47375,
+     -0.38301522
+    ],
+    [
+     42.44417,
+     -0.39321703
     ]
    ]
   },
@@ -902,21 +962,21 @@
   },
   {
    "route": "N-330",
-   "pk": "621.1-617.5",
+   "pk": "623.5-622.5",
    "gestion": "intermittentShortTermClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-26T08:01",
+   "depuis": "2026-10-26T08:02",
    "province": "Huesca",
    "coords": [
     [
-     42.47375,
-     -0.38301522
+     42.491436,
+     -0.36864796
     ],
     [
-     42.44417,
-     -0.39321703
+     42.48421,
+     -0.37606066
     ]
    ]
   },
@@ -941,66 +1001,66 @@
    ]
   },
   {
-   "route": "N-330",
-   "pk": "616.5-615.0",
-   "gestion": "intermittentShortTermClosures",
+   "route": "N-260",
+   "pk": "398.7-395.0",
+   "gestion": "singleAlternateLineTraffic",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-26T08:01",
+   "depuis": "2026-10-29T08:25",
    "province": "Huesca",
    "coords": [
     [
-     42.43567,
-     -0.39653024
+     42.45011,
+     0.38639364
     ],
     [
-     42.42269,
-     -0.39611152
+     42.465385,
+     0.4197687
     ]
    ]
   },
   {
-   "route": "A-2",
-   "pk": "326.0-326.1",
+   "route": "N-260",
+   "pk": "395.0-398.7",
+   "gestion": "singleAlternateLineTraffic",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-10-29T08:25",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.465385,
+     0.4197687
+    ],
+    [
+     42.45011,
+     0.38639364
+    ]
+   ]
+  },
+  {
+   "route": "N-2",
+   "pk": "364.5-364.6",
    "gestion": "narrowLanes",
-   "cause": "vehicleObstruction",
-   "detail": null,
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-29T06:47",
+   "depuis": "2026-10-29T08:50",
    "province": "Zaragoza",
    "coords": [
     [
-     41.675953,
-     -0.8359209
+     41.514126,
+     -0.45373383
     ],
     [
-     41.67556,
-     -0.8347657
-    ]
-   ]
-  },
-  {
-   "route": "A-2",
-   "pk": "326.0-326.1",
-   "gestion": "laneClosures",
-   "cause": "vehicleObstruction",
-   "detail": null,
-   "gravite": "unknown",
-   "depuis": "2026-10-29T06:47",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.675953,
-     -0.8359209
-    ],
-    [
-     41.67556,
-     -0.8347657
+     41.514088,
+     -0.45254678
     ]
    ]
   }
  ],
- "avis_maj": "2026-10-29T06:00Z",
- "routes_maj": "2026-10-29T06:07Z"
+ "avis_maj": "2026-10-29T13:18Z",
+ "routes_maj": "2026-10-29T13:24Z"
 }
