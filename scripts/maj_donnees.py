@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.7 — 29 octobre 2026 à 06:24 — moins de requêtes AEMET et règle d'échec corrigée
+Version 1.8 — 30 octobre 2026 à 06:04 — plan B des observations horaires et relecture du jour par station
+  · observations horaires : si le lien « toutes stations » (/observacion/convencional/todas) échoue,
+    repli station par station (/observacion/convencional/datos/estacion/{id}) ; échec seulement si aucune ne répond
+  · relecture quotidienne de l'historique suivie station par station (rb1-pluie.json « rafraichi » : {station: date}) ;
+    seules les stations en échec ou en retard sont redemandées dans la journée (remplace « rafraichi_le » de la v1.7)
+v1.7 — 29 octobre 2026 à 06:24 — moins de requêtes AEMET et règle d'échec corrigée
   · historique : seules les stations en retard sont interrogées (dernier jour < aujourd'hui − RETARD_AEMET_JOURS) ;
     toutes les stations restent rafraîchies une fois par jour (UTC), au cas où AEMET corrige des valeurs
   · règle d'échec : les stations sans aucun historique (ex. Bujaraloz 9576C) ne comptent plus ; échec si plus
@@ -186,15 +191,16 @@ def maj_pluie():
     fi = f"{debut:%Y-%m-%d}T00:00:00UTC"
     ff = f"{fin:%Y-%m-%d}T23:59:59UTC"
     cible = f"{fin - timedelta(days=RETARD_AEMET_JOURS):%Y-%m-%d}"
-    tout_rafraichir = pluie.get("rafraichi_le") != f"{fin:%Y-%m-%d}"   # v1.7 : une fois par jour, toutes les stations
+    aujourd_hui = f"{fin:%Y-%m-%d}"
+    pluie.pop("rafraichi_le", None)                       # v1.8 : remplacé par le suivi par station
+    rafraichi = pluie.setdefault("rafraichi", {})         # {station: date UTC de la dernière relecture réussie}
     ajouts = 0
     demandees = 0
-    reussies = True
     for s in stations:
         sid = s["id"]
         hist = pluie["obs"].get(sid) or {}
-        if not tout_rafraichir and hist and max(hist) >= cible:
-            continue            # v1.7 : déjà à jour, inutile d'interroger AEMET
+        if rafraichi.get(sid) == aujourd_hui and hist and max(hist) >= cible:
+            continue            # v1.8 : déjà relue aujourd'hui et à jour, inutile d'interroger AEMET
         demandees += 1
         variantes = [sid]
         if sid[-1].isalpha():  # même logique que aemet_tracker.py
@@ -214,8 +220,6 @@ def maj_pluie():
             if lignes:
                 break
         if not lignes:
-            if hist:
-                reussies = False
             continue
         obs = pluie["obs"].setdefault(sid, {})
         for l in lignes:
@@ -227,8 +231,7 @@ def maj_pluie():
                 ajouts += 1
             obs[date] = val
         pluie["obs"][sid] = dict(sorted(obs.items()))
-    if tout_rafraichir and reussies:
-        pluie["rafraichi_le"] = f"{fin:%Y-%m-%d}"
+        rafraichi[sid] = aujourd_hui
     pluie["maj"] = maintenant()
     ecrire("rb1-pluie.json", pluie, compact=True)
     # v1.7 : retard de chaque station ayant un historique, par rapport à la station la plus à jour
@@ -237,7 +240,7 @@ def maj_pluie():
     if derniers:
         ref = datetime.strptime(max(derniers.values()), "%Y-%m-%d").date()
         en_retard = sum(1 for d in derniers.values() if (ref - datetime.strptime(d, "%Y-%m-%d").date()).days >= 2)
-    print(f"AEMET : {demandees} station(s) interrogée(s){' (rafraîchissement du jour)' if tout_rafraichir else ''}, "
+    print(f"AEMET : {demandees} station(s) interrogée(s), "
           f"{ajouts} nouveaux jours-station, {en_retard} station(s) sur {len(derniers)} avec 2 jours ou plus de retard")
     return en_retard, len(derniers)
 
@@ -249,13 +252,29 @@ def maj_obs_horaires():
     """Pluie horaire des stations RB1. Métadonnées AEMET : prec = « Precipitación acumulada, medida por el
     pluviómetro, durante los 60 minutos anteriores a la hora indicada por 'fint' (mm) », fint en UTC."""
     ids = {s["id"] for s in charger("rb1-stations.json", {})["stations"]}
-    rep = aemet_get(f"{BASE_URL}/observacion/convencional/todas")
-    if rep is None:
-        raise RuntimeError("aucune donnée d'observation renvoyée")
+    try:
+        rep = aemet_get(f"{BASE_URL}/observacion/convencional/todas")
+        if rep is None:
+            raise RuntimeError("aucune donnée d'observation renvoyée")
+        releves = rep.json()
+    except Exception as e:                       # v1.8 : plan B station par station
+        print(f"⚠️  Observations « toutes stations » indisponibles ({e}) : repli station par station")
+        releves, ok = [], 0
+        for sid in sorted(ids):
+            try:
+                r = aemet_get(f"{BASE_URL}/observacion/convencional/datos/estacion/{sid}")
+                if r is not None:
+                    releves += r.json()
+                    ok += 1
+            except Exception:
+                pass
+        if not ok:
+            raise RuntimeError(f"toutes stations : {e} ; repli station par station : aucune réponse")
+        print(f"   repli : {ok} station(s) sur {len(ids)} ont répondu")
     obs = charger("rb1-obs-horaires.json", {"rb": "RB1", "unite": "mm sur les 60 min précédant l'heure (UTC)", "obs": {}})
     limite = (datetime.now(timezone.utc) - timedelta(days=JOURS_HORAIRES)).strftime("%Y-%m-%dT%H:00Z")
     nouv = 0
-    for o in rep.json():
+    for o in releves:
         sid = o.get("idema")
         if sid not in ids or o.get("prec") is None or not o.get("fint"):
             continue
