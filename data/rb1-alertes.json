@@ -803,7 +803,7 @@
   {
    "route": "A-68",
    "pk": "225.0-224.0",
-   "gestion": "carriagewayClosures",
+   "gestion": "useOfSpecifiedLanesOrCarriagewaysAllowed",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
@@ -823,7 +823,7 @@
   {
    "route": "A-68",
    "pk": "225.0-224.0",
-   "gestion": "useOfSpecifiedLanesOrCarriagewaysAllowed",
+   "gestion": "carriagewayClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
@@ -839,28 +839,8 @@
      -0.76419955
     ]
    ]
-  },
-  {
-   "route": "N-2",
-   "pk": "392.0-391.9",
-   "gestion": "narrowLanes",
-   "cause": "vehicleObstruction",
-   "detail": null,
-   "gravite": "unknown",
-   "depuis": "2026-10-30T11:03",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.498196,
-     -0.13981909
-    ],
-    [
-     41.498146,
-     -0.14104107
-    ]
-   ]
   }
  ],
- "avis_maj": "2026-10-30T16:44Z",
- "routes_maj": "2026-10-30T16:49Z"
+ "avis_maj": "2026-10-30T21:38Z",
+ "routes_maj": "2026-10-30T21:41Z"
 }
