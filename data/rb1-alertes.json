@@ -746,22 +746,6 @@
   },
   {
    "route": "N-123",
-   "pk": "",
-   "gestion": "lanesDeviated",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-09-21T11:08",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.025597,
-     0.13908309
-    ]
-   ]
-  },
-  {
-   "route": "N-123",
    "pk": "0.48-0.1",
    "gestion": "laneClosures",
    "cause": "roadMaintenance",
@@ -777,6 +761,22 @@
     [
      42.0225,
      0.13771658
+    ]
+   ]
+  },
+  {
+   "route": "N-123",
+   "pk": "",
+   "gestion": "lanesDeviated",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-09-21T11:08",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.025597,
+     0.13908309
     ]
    ]
   },
@@ -841,6 +841,6 @@
    ]
   }
  ],
- "avis_maj": "2026-10-31T01:39Z",
- "routes_maj": "2026-10-31T01:46Z"
+ "avis_maj": "2026-10-31T08:38Z",
+ "routes_maj": "2026-10-31T08:40Z"
 }
