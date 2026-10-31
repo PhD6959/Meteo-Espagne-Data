@@ -1,12 +1,6 @@
 {
- "derniere_execution": "2026-10-31T08:40Z",
- "erreurs": [
-  "AEMET station 9576C : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9894Y : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9901X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9911X : 500 Server Error: Internal Server Error for url: https://opendata.aemet.es/opendata/sh/08d16da3",
-  "AEMET station 9911X : clé API AEMET refusée (401, 1 essais)"
- ],
- "derniere_execution_horaire": "2026-10-31T08:40Z",
+ "derniere_execution": "2026-10-31T15:27Z",
+ "erreurs": [],
+ "derniere_execution_horaire": "2026-10-31T15:27Z",
  "erreurs_horaire": []
 }
