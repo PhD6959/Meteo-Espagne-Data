@@ -1,13 +1,6 @@
 {
- "derniere_execution": "2026-11-02T11:30Z",
- "erreurs": [
-  "AEMET station 9866C : clé API AEMET refusée (401, 2 essais)",
-  "AEMET station 9866C : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9901X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9901X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9911X : clé API AEMET refusée (401, 1 essais)",
-  "AEMET station 9924X : clé API AEMET refusée (401, 1 essais)"
- ],
- "derniere_execution_horaire": "2026-11-02T11:30Z",
+ "derniere_execution": "2026-11-02T21:52Z",
+ "erreurs": [],
+ "derniere_execution_horaire": "2026-11-02T21:52Z",
  "erreurs_horaire": []
 }
