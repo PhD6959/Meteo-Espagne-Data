@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.9 — 4 novembre 2026 à 17:44 — historique en une seule requête « toutes stations »
+Version 1.10 — 4 novembre 2026 à 18:01 — essais réservés aux avis Meteoalerta
+  · 3 nouveaux essais 401 réservés aux avis (BUDGET_AVIS_401, soit 4 tentatives), hors plafond commun de 12 : un refus
+    répété des observations horaires (qui passent avant) ne peut plus priver les avis de nouvel essai
+v1.9 — 4 novembre 2026 à 17:44 — historique en une seule requête « toutes stations »
   · /valores/climatologicos/diarios/datos/fechaini/{}/fechafin/{}/todasestaciones (AEMET : « Climatologías diarias.
     Todas. Valores climatológicos de todas las estaciones para el rango de fechas seleccionado ») sur 14 jours ;
     on n'interroge plus une à une que les stations RB1 absentes de cette réponse (même logique qu'en v1.8)
@@ -130,11 +133,12 @@ def get_aemet(url, **kw):
 
 
 RETRY_401 = 3   # v1.3 : nouveaux essais après un refus 401 (pauses de 10, 20, 30 s)
+BUDGET_AVIS_401 = 3   # v1.10 : nouveaux essais 401 réservés aux avis, hors plafond commun
 budget_401 = [12]  # v1.4 : plafond de nouveaux essais 401 par exécution (≈ 4 min de pauses au plus),
                    # pour rester loin du délai de 20 min de la tâche GitHub si la clé est vraiment refusée
 
 
-def aemet_get(url, essais=3):
+def aemet_get(url, essais=3, budget=None):
     """Appel AEMET en deux temps (URL de données puis données), avec gestion du 429 et des 401 isolés."""
     refus = 0
     essai = 0
@@ -142,9 +146,10 @@ def aemet_get(url, essais=3):
         try:
             r = get_aemet(url, headers={"api_key": API_KEY}, timeout=30)
             if r.status_code == 401:
-                if refus < RETRY_401 and budget_401[0] > 0:
+                b = budget if budget is not None else budget_401   # v1.10 : plafond dédié possible
+                if refus < RETRY_401 and b[0] > 0:
                     refus += 1
-                    budget_401[0] -= 1
+                    b[0] -= 1
                     time.sleep(10 * refus)
                     continue          # un refus 401 ne consomme pas d'essai réseau
                 raise RuntimeError(f"clé API AEMET refusée (401, {refus + 1} essais)")
@@ -377,7 +382,8 @@ def lire_cap(xml_bytes, maintenant_utc):
 
 
 def maj_avis():
-    rep = aemet_get(f"{BASE_URL}/avisos_cap/ultimoelaborado/area/{AVISOS_AREA}")
+    rep = aemet_get(f"{BASE_URL}/avisos_cap/ultimoelaborado/area/{AVISOS_AREA}", essais=3,
+                    budget=[BUDGET_AVIS_401])   # v1.10 : essais réservés
     if rep is None:
         return []
     contenu = rep.content
