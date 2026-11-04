@@ -2,7 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 Météo Espagne — mise à jour automatique des données publiques (dépôt Meteo-Espagne-Data)
-Version 1.8 — 30 octobre 2026 à 06:04 — plan B des observations horaires et relecture du jour par station
+Version 1.9 — 4 novembre 2026 à 17:44 — historique en une seule requête « toutes stations »
+  · /valores/climatologicos/diarios/datos/fechaini/{}/fechafin/{}/todasestaciones (AEMET : « Climatologías diarias.
+    Todas. Valores climatológicos de todas las estaciones para el rango de fechas seleccionado ») sur 14 jours ;
+    on n'interroge plus une à une que les stations RB1 absentes de cette réponse (même logique qu'en v1.8)
+  · fenêtre de 14 jours : limite de 15 jours relevée dans le paquet climaemet, non indiquée par la documentation AEMET
+  · une station sans aucun historique (ex. Bujaraloz 9576C) n'est plus demandée qu'une fois par jour
+  · sauvegarde de la v1.8 : 08-Meteo-Espagne-App/Legacy Météo Espagne App/20261104 maj_donnees v1.8 (…)
+v1.8 — 30 octobre 2026 à 06:04 — plan B des observations horaires et relecture du jour par station
   · observations horaires : si le lien « toutes stations » (/observacion/convencional/todas) échoue,
     repli station par station (/observacion/convencional/datos/estacion/{id}) ; échec seulement si aucune ne répond
   · relecture quotidienne de l'historique suivie station par station (rb1-pluie.json « rafraichi » : {station: date}) ;
@@ -180,7 +187,29 @@ def nombre(v, prec=False):
 
 
 # ---------------------------------------------------------------- historique AEMET
+JOURS_TOUTES_STATIONS = 14   # v1.9 : fenêtre de la requête « toutes stations » (15 jours max selon climaemet)
 RETARD_AEMET_JOURS = 4   # v1.7 : décalage de publication AEMET (« retardo de 4 días », métadonnées AEMET)
+
+
+def demander_station(sid, fi, ff):
+    """Historique d'une station (requête individuelle, avec la variante de code sans lettre finale)."""
+    variantes = [sid]
+    if sid[-1].isalpha():  # même logique que aemet_tracker.py
+        variantes.append(sid.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
+    for code in variantes:
+        try:
+            rep = aemet_get(f"{BASE_URL}/valores/climatologicos/diarios/datos/fechaini/{fi}/fechafin/{ff}/estacion/{code}")
+        except Exception as e:
+            erreurs.append(f"AEMET station {sid} : {e}")
+            rep = None
+        if rep is not None:
+            try:
+                lignes = rep.json()
+            except ValueError:
+                lignes = None
+            if lignes:
+                return lignes
+    return None
 
 
 def maj_pluie():
@@ -194,31 +223,37 @@ def maj_pluie():
     aujourd_hui = f"{fin:%Y-%m-%d}"
     pluie.pop("rafraichi_le", None)                       # v1.8 : remplacé par le suivi par station
     rafraichi = pluie.setdefault("rafraichi", {})         # {station: date UTC de la dernière relecture réussie}
+    essai_sans_hist = pluie.setdefault("essai_sans_historique", {})   # v1.9 : {station: date du dernier essai}
     ajouts = 0
     demandees = 0
+    # v1.9 : une seule requête pour toutes les stations, puis repli station par station pour les absentes
+    groupees = {}
+    ids_rb1 = {s["id"] for s in stations}
+    dt = fin - timedelta(days=JOURS_TOUTES_STATIONS - 1)
+    try:
+        rep_toutes = aemet_get(f"{BASE_URL}/valores/climatologicos/diarios/datos/fechaini/{dt:%Y-%m-%d}T00:00:00UTC"
+                               f"/fechafin/{fin:%Y-%m-%d}T23:59:59UTC/todasestaciones")
+        if rep_toutes is not None:
+            for l in rep_toutes.json():
+                if l.get("indicativo") in ids_rb1:
+                    groupees.setdefault(l["indicativo"], []).append(l)
+        print(f"AEMET toutes stations : {len(groupees)} station(s) RB1 sur {len(ids_rb1)} dans la réponse")
+    except Exception as e:
+        erreurs.append(f"AEMET toutes stations : {e}")
+        print(f"⚠️  Requête « toutes stations » en échec ({e}) : repli station par station")
     for s in stations:
         sid = s["id"]
         hist = pluie["obs"].get(sid) or {}
-        if rafraichi.get(sid) == aujourd_hui and hist and max(hist) >= cible:
-            continue            # v1.8 : déjà relue aujourd'hui et à jour, inutile d'interroger AEMET
-        demandees += 1
-        variantes = [sid]
-        if sid[-1].isalpha():  # même logique que aemet_tracker.py
-            variantes.append(sid.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
-        lignes = None
-        for code in variantes:
-            try:
-                rep = aemet_get(f"{BASE_URL}/valores/climatologicos/diarios/datos/fechaini/{fi}/fechafin/{ff}/estacion/{code}")
-            except Exception as e:
-                erreurs.append(f"AEMET station {sid} : {e}")
-                rep = None
-            if rep is not None:
-                try:
-                    lignes = rep.json()
-                except ValueError:
-                    lignes = None
-            if lignes:
-                break
+        lignes = groupees.get(sid)
+        if not lignes:
+            if rafraichi.get(sid) == aujourd_hui and hist and max(hist) >= cible:
+                continue            # v1.8 : déjà relue aujourd'hui et à jour, inutile d'interroger AEMET
+            if not hist:
+                if essai_sans_hist.get(sid) == aujourd_hui:
+                    continue        # v1.9 : station sans historique, déjà essayée aujourd'hui
+                essai_sans_hist[sid] = aujourd_hui
+            lignes = demander_station(sid, fi, ff)
+            demandees += 1
         if not lignes:
             continue
         obs = pluie["obs"].setdefault(sid, {})
@@ -240,7 +275,7 @@ def maj_pluie():
     if derniers:
         ref = datetime.strptime(max(derniers.values()), "%Y-%m-%d").date()
         en_retard = sum(1 for d in derniers.values() if (ref - datetime.strptime(d, "%Y-%m-%d").date()).days >= 2)
-    print(f"AEMET : {demandees} station(s) interrogée(s), "
+    print(f"AEMET : {demandees} station(s) interrogée(s) une à une, "
           f"{ajouts} nouveaux jours-station, {en_retard} station(s) sur {len(derniers)} avec 2 jours ou plus de retard")
     return en_retard, len(derniers)
 
