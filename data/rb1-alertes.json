@@ -2,556 +2,6 @@
  "avis": [
   {
    "zone": "Pirineo oscense",
-   "evenement": "Aviso de aludes de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de aludes de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de temperaturas máximas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de temperaturas máximas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de temperaturas máximas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de temperaturas máximas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de temperaturas máximas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de temperaturas máximas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de temperaturas mínimas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de temperaturas mínimas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de temperaturas mínimas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de temperaturas mínimas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de temperaturas mínimas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de temperaturas mínimas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de deshielos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de deshielos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de deshielos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de deshielos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de deshielos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de deshielos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de deshielos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de deshielos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de deshielos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de deshielos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de deshielos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de deshielos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de nevadas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nevadas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de nevadas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nevadas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de nevadas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nevadas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de nevadas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nevadas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de nevadas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nevadas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de nevadas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nevadas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de nieblas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nieblas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de nieblas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nieblas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de nieblas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nieblas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de nieblas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nieblas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de nieblas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nieblas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de nieblas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de nieblas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de lluvias de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de lluvias de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de lluvias de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de lluvias de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de lluvias de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de lluvias de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de tormentas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de tormentas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de tormentas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de tormentas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de tormentas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de tormentas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de tormentas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de tormentas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de tormentas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de tormentas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de tormentas de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de tormentas de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de vientos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de vientos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de vientos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de vientos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de vientos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de vientos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de vientos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de vientos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de vientos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de vientos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de vientos de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de vientos de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de polvo en suspensión de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Centro de Huesca",
-   "evenement": "Aviso de polvo en suspensión de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Sur de Huesca",
-   "evenement": "Aviso de polvo en suspensión de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de polvo en suspensión de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de polvo en suspensión de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Ribera del Ebro de Zaragoza",
-   "evenement": "Aviso de polvo en suspensión de nivel verde",
-   "niveau": "verde",
-   "gravite": "Minor",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T23:59:59+01:00",
-   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
-   "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
    "evenement": "Aviso de lluvias de nivel amarillo",
    "niveau": "amarillo",
    "gravite": "Moderate",
@@ -582,16 +32,6 @@
   },
   {
    "zone": "Pirineo oscense",
-   "evenement": "Aviso de lluvias de nivel amarillo",
-   "niveau": "amarillo",
-   "gravite": "Moderate",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T11:59:59+01:00",
-   "titre": "Aviso de lluvias de nivel amarillo. Pirineo oscense",
-   "description": "Precipitación acumulada en 12 horas: 60 mm."
-  },
-  {
-   "zone": "Pirineo oscense",
    "evenement": "Aviso de vientos de nivel amarillo",
    "niveau": "amarillo",
    "gravite": "Moderate",
@@ -599,26 +39,6 @@
    "fin": "2026-11-12T11:59:59+01:00",
    "titre": "Aviso de vientos de nivel amarillo. Pirineo oscense",
    "description": "Rachas máximas: 80 km/h. Viento de componente sur, afectando a cotas altas."
-  },
-  {
-   "zone": "Cinco Villas de Zaragoza",
-   "evenement": "Aviso de vientos de nivel amarillo",
-   "niveau": "amarillo",
-   "gravite": "Moderate",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T02:59:59+01:00",
-   "titre": "Aviso de vientos de nivel amarillo. Cinco Villas de Zaragoza",
-   "description": "Rachas máximas: 70 km/h. Viento del sureste."
-  },
-  {
-   "zone": "Ibérica zaragozana",
-   "evenement": "Aviso de vientos de nivel amarillo",
-   "niveau": "amarillo",
-   "gravite": "Moderate",
-   "debut": "2026-11-12T00:00:00+01:00",
-   "fin": "2026-11-12T14:59:59+01:00",
-   "titre": "Aviso de vientos de nivel amarillo. Ibérica zaragozana",
-   "description": "Rachas máximas: 80 km/h. Viento del oeste."
   },
   {
    "zone": "Centro de Huesca",
@@ -659,6 +79,646 @@
    "fin": "2026-11-11T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel amarillo. Ribera del Ebro de Zaragoza",
    "description": "Rachas máximas: 70 km/h. Viento del sureste, girando a oeste en la madrugada del jueves."
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de lluvias de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel amarillo. Pirineo oscense",
+   "description": "Precipitación acumulada en una hora: 15 mm."
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de lluvias de nivel naranja",
+   "niveau": "naranja",
+   "gravite": "Severe",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel naranja. Pirineo oscense",
+   "description": "Precipitación acumulada en 12 horas: 80 mm."
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de lluvias de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel amarillo. Centro de Huesca",
+   "description": "Precipitación acumulada en 12 horas: 60 mm."
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de vientos de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de vientos de nivel amarillo. Centro de Huesca",
+   "description": "Rachas máximas: 70 km/h. Viento del sureste, girando a oeste en la madrugada del jueves."
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de vientos de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de vientos de nivel amarillo. Sur de Huesca",
+   "description": "Rachas máximas: 70 km/h. Viento del sureste, girando a oeste en la madrugada del jueves."
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de vientos de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de vientos de nivel amarillo. Cinco Villas de Zaragoza",
+   "description": "Rachas máximas: 70 km/h. Viento del sureste, girando a oeste en la madrugada del jueves."
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de vientos de nivel naranja",
+   "niveau": "naranja",
+   "gravite": "Severe",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T08:59:59+01:00",
+   "titre": "Aviso de vientos de nivel naranja. Ibérica zaragozana",
+   "description": "Rachas máximas: 100 km/h. Viento del oeste."
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de vientos de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T09:00:00+01:00",
+   "fin": "2026-11-12T14:59:59+01:00",
+   "titre": "Aviso de vientos de nivel amarillo. Ibérica zaragozana",
+   "description": "Rachas máximas: 80 km/h. Viento del oeste."
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de vientos de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-12T00:00:00+01:00",
+   "fin": "2026-11-12T11:59:59+01:00",
+   "titre": "Aviso de vientos de nivel amarillo. Ribera del Ebro de Zaragoza",
+   "description": "Rachas máximas: 70 km/h. Viento del sureste, girando a oeste en la madrugada del jueves."
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de aludes de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de aludes de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de temperaturas máximas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de temperaturas máximas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de temperaturas máximas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de temperaturas máximas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de temperaturas máximas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de temperaturas máximas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de temperaturas mínimas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de temperaturas mínimas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de temperaturas mínimas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de temperaturas mínimas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de temperaturas mínimas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de temperaturas mínimas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de deshielos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de deshielos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de deshielos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de deshielos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de deshielos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de deshielos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de deshielos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de deshielos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de deshielos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de deshielos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de deshielos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de deshielos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de nevadas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nevadas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de nevadas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nevadas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de nevadas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nevadas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de nevadas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nevadas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de nevadas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nevadas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de nevadas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nevadas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de nieblas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nieblas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de nieblas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nieblas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de nieblas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nieblas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de nieblas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nieblas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de nieblas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nieblas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de nieblas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de nieblas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de lluvias de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de lluvias de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de lluvias de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de lluvias de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de lluvias de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de lluvias de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de lluvias de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de tormentas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de tormentas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de tormentas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de tormentas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de tormentas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de tormentas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de tormentas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de tormentas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de tormentas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de tormentas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de tormentas de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de tormentas de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de vientos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de vientos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de vientos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de vientos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de vientos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de vientos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de vientos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de vientos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de vientos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de vientos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de vientos de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de vientos de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Pirineo oscense",
+   "evenement": "Aviso de polvo en suspensión de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Centro de Huesca",
+   "evenement": "Aviso de polvo en suspensión de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Sur de Huesca",
+   "evenement": "Aviso de polvo en suspensión de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Cinco Villas de Zaragoza",
+   "evenement": "Aviso de polvo en suspensión de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ibérica zaragozana",
+   "evenement": "Aviso de polvo en suspensión de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
+   "description": ""
+  },
+  {
+   "zone": "Ribera del Ebro de Zaragoza",
+   "evenement": "Aviso de polvo en suspensión de nivel verde",
+   "niveau": "verde",
+   "gravite": "Minor",
+   "debut": "2026-11-13T00:00:00+01:00",
+   "fin": "2026-11-13T23:59:59+01:00",
+   "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
+   "description": ""
   }
  ],
  "routes": [
@@ -800,26 +860,6 @@
   },
   {
    "route": "N-123",
-   "pk": "0.48-0.1",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-09-21T11:08",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.025623,
-     0.13911663
-    ],
-    [
-     42.0225,
-     0.13771658
-    ]
-   ]
-  },
-  {
-   "route": "N-123",
    "pk": "",
    "gestion": "lanesDeviated",
    "cause": "roadMaintenance",
@@ -835,22 +875,22 @@
    ]
   },
   {
-   "route": "A-68",
-   "pk": "224.0-225.0",
+   "route": "N-123",
+   "pk": "0.48-0.1",
    "gestion": "laneClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-16T14:03",
-   "province": "Zaragoza",
+   "depuis": "2026-09-21T11:08",
+   "province": "Huesca",
    "coords": [
     [
-     41.579872,
-     -0.7642505
+     42.025623,
+     0.13911663
     ],
     [
-     41.58291,
-     -0.77235395
+     42.0225,
+     0.13771658
     ]
    ]
   },
@@ -875,22 +915,22 @@
    ]
   },
   {
-   "route": "A-123",
-   "pk": "16.0-16.5",
-   "gestion": "singleAlternateLineTraffic",
+   "route": "A-68",
+   "pk": "224.0-225.0",
+   "gestion": "laneClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-11-04T17:32",
+   "depuis": "2026-10-16T14:03",
    "province": "Zaragoza",
    "coords": [
     [
-     41.797417,
-     -0.7803409
+     41.579872,
+     -0.7642505
     ],
     [
-     41.801517,
-     -0.77796906
+     41.58291,
+     -0.77235395
     ]
    ]
   },
@@ -911,6 +951,126 @@
     [
      41.797417,
      -0.7803409
+    ]
+   ]
+  },
+  {
+   "route": "A-123",
+   "pk": "16.0-16.5",
+   "gestion": "singleAlternateLineTraffic",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-04T17:32",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.797417,
+     -0.7803409
+    ],
+    [
+     41.801517,
+     -0.77796906
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "615.0-616.5",
+   "gestion": "intermittentShortTermClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-09T09:56",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.42269,
+     -0.39611152
+    ],
+    [
+     42.43567,
+     -0.39653024
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "621.1-617.5",
+   "gestion": "intermittentShortTermClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-09T09:57",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.47375,
+     -0.38301522
+    ],
+    [
+     42.44417,
+     -0.39321703
+    ]
+   ]
+  },
+  {
+   "route": "A-23",
+   "pk": "404.5-403.3",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-09T09:56",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.492695,
+     -0.36686486
+    ],
+    [
+     42.48362,
+     -0.37551916
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "616.5-615.0",
+   "gestion": "intermittentShortTermClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-09T09:56",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.43567,
+     -0.39653024
+    ],
+    [
+     42.42269,
+     -0.39611152
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "622.5-623.5",
+   "gestion": "intermittentShortTermClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-09T09:57",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.48421,
+     -0.37606066
+    ],
+    [
+     42.491436,
+     -0.36864796
     ]
    ]
   },
@@ -955,106 +1115,6 @@
    ]
   },
   {
-   "route": "N-330",
-   "pk": "622.5-623.5",
-   "gestion": "intermittentShortTermClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-09T09:57",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.48421,
-     -0.37606066
-    ],
-    [
-     42.491436,
-     -0.36864796
-    ]
-   ]
-  },
-  {
-   "route": "A-23",
-   "pk": "404.5-403.3",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-09T09:56",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.492695,
-     -0.36686486
-    ],
-    [
-     42.48362,
-     -0.37551916
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
-   "pk": "615.0-616.5",
-   "gestion": "intermittentShortTermClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-09T09:56",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.42269,
-     -0.39611152
-    ],
-    [
-     42.43567,
-     -0.39653024
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
-   "pk": "616.5-615.0",
-   "gestion": "intermittentShortTermClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-09T09:56",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.43567,
-     -0.39653024
-    ],
-    [
-     42.42269,
-     -0.39611152
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
-   "pk": "621.1-617.5",
-   "gestion": "intermittentShortTermClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-09T09:57",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.47375,
-     -0.38301522
-    ],
-    [
-     42.44417,
-     -0.39321703
-    ]
-   ]
-  },
-  {
    "route": "A-2",
    "pk": "438.0-436.0",
    "gestion": "laneClosures",
@@ -1073,8 +1133,68 @@
      0.35887367
     ]
    ]
+  },
+  {
+   "route": "A-2",
+   "pk": "324.9-324.1",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-10T20:19",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.67792,
+     -0.8488471
+    ],
+    [
+     41.679394,
+     -0.8584134
+    ]
+   ]
+  },
+  {
+   "route": "A-2",
+   "pk": "325.3-324.1",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-10T20:19",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.6773,
+     -0.8440845
+    ],
+    [
+     41.679394,
+     -0.8584134
+    ]
+   ]
+  },
+  {
+   "route": "Z-40",
+   "pk": "20.0-21.0",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-11T00:28",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.62582,
+     -0.8471255
+    ],
+    [
+     41.622105,
+     -0.85805976
+    ]
+   ]
   }
  ],
- "avis_maj": "2026-11-10T17:57Z",
- "routes_maj": "2026-11-10T17:57Z"
+ "avis_maj": "2026-11-10T23:30Z",
+ "routes_maj": "2026-11-10T23:30Z"
 }
