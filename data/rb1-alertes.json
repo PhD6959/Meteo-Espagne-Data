@@ -2,11 +2,21 @@
  "avis": [
   {
    "zone": "Pirineo oscense",
+   "evenement": "Aviso de temperaturas mínimas de nivel amarillo",
+   "niveau": "amarillo",
+   "gravite": "Moderate",
+   "debut": "2026-11-27T00:00:00+01:00",
+   "fin": "2026-11-27T08:59:59+01:00",
+   "titre": "Aviso de temperaturas mínimas de nivel amarillo. Pirineo oscense",
+   "description": "Temperatura mínima: -6 ºC. Estos valores se esperan en el norte de la zona."
+  },
+  {
+   "zone": "Pirineo oscense",
    "evenement": "Aviso de aludes de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de aludes de nivel verde. CCAA",
    "description": ""
   },
@@ -15,8 +25,8 @@
    "evenement": "Aviso de temperaturas máximas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
    "description": ""
   },
@@ -25,8 +35,8 @@
    "evenement": "Aviso de temperaturas máximas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
    "description": ""
   },
@@ -35,8 +45,8 @@
    "evenement": "Aviso de temperaturas máximas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
    "description": ""
   },
@@ -45,8 +55,8 @@
    "evenement": "Aviso de temperaturas máximas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
    "description": ""
   },
@@ -55,8 +65,8 @@
    "evenement": "Aviso de temperaturas máximas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
    "description": ""
   },
@@ -65,8 +75,8 @@
    "evenement": "Aviso de temperaturas máximas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas máximas de nivel verde. CCAA",
    "description": ""
   },
@@ -75,8 +85,8 @@
    "evenement": "Aviso de temperaturas mínimas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
    "description": ""
   },
@@ -85,8 +95,8 @@
    "evenement": "Aviso de temperaturas mínimas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
    "description": ""
   },
@@ -95,8 +105,8 @@
    "evenement": "Aviso de temperaturas mínimas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
    "description": ""
   },
@@ -105,8 +115,8 @@
    "evenement": "Aviso de temperaturas mínimas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
    "description": ""
   },
@@ -115,8 +125,8 @@
    "evenement": "Aviso de temperaturas mínimas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
    "description": ""
   },
@@ -125,8 +135,8 @@
    "evenement": "Aviso de temperaturas mínimas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de temperaturas mínimas de nivel verde. CCAA",
    "description": ""
   },
@@ -135,8 +145,8 @@
    "evenement": "Aviso de deshielos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de deshielos de nivel verde. CCAA",
    "description": ""
   },
@@ -145,8 +155,8 @@
    "evenement": "Aviso de deshielos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de deshielos de nivel verde. CCAA",
    "description": ""
   },
@@ -155,8 +165,8 @@
    "evenement": "Aviso de deshielos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de deshielos de nivel verde. CCAA",
    "description": ""
   },
@@ -165,8 +175,8 @@
    "evenement": "Aviso de deshielos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de deshielos de nivel verde. CCAA",
    "description": ""
   },
@@ -175,8 +185,8 @@
    "evenement": "Aviso de deshielos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de deshielos de nivel verde. CCAA",
    "description": ""
   },
@@ -185,8 +195,8 @@
    "evenement": "Aviso de deshielos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de deshielos de nivel verde. CCAA",
    "description": ""
   },
@@ -195,8 +205,8 @@
    "evenement": "Aviso de nevadas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nevadas de nivel verde. CCAA",
    "description": ""
   },
@@ -205,8 +215,8 @@
    "evenement": "Aviso de nevadas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nevadas de nivel verde. CCAA",
    "description": ""
   },
@@ -215,8 +225,8 @@
    "evenement": "Aviso de nevadas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nevadas de nivel verde. CCAA",
    "description": ""
   },
@@ -225,8 +235,8 @@
    "evenement": "Aviso de nevadas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nevadas de nivel verde. CCAA",
    "description": ""
   },
@@ -235,8 +245,8 @@
    "evenement": "Aviso de nevadas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nevadas de nivel verde. CCAA",
    "description": ""
   },
@@ -245,8 +255,8 @@
    "evenement": "Aviso de nevadas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nevadas de nivel verde. CCAA",
    "description": ""
   },
@@ -255,8 +265,8 @@
    "evenement": "Aviso de nieblas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nieblas de nivel verde. CCAA",
    "description": ""
   },
@@ -265,8 +275,8 @@
    "evenement": "Aviso de nieblas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nieblas de nivel verde. CCAA",
    "description": ""
   },
@@ -275,8 +285,8 @@
    "evenement": "Aviso de nieblas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nieblas de nivel verde. CCAA",
    "description": ""
   },
@@ -285,8 +295,8 @@
    "evenement": "Aviso de nieblas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nieblas de nivel verde. CCAA",
    "description": ""
   },
@@ -295,8 +305,8 @@
    "evenement": "Aviso de nieblas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nieblas de nivel verde. CCAA",
    "description": ""
   },
@@ -305,8 +315,8 @@
    "evenement": "Aviso de nieblas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de nieblas de nivel verde. CCAA",
    "description": ""
   },
@@ -315,8 +325,8 @@
    "evenement": "Aviso de lluvias de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de lluvias de nivel verde. CCAA",
    "description": ""
   },
@@ -325,8 +335,8 @@
    "evenement": "Aviso de lluvias de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de lluvias de nivel verde. CCAA",
    "description": ""
   },
@@ -335,8 +345,8 @@
    "evenement": "Aviso de lluvias de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de lluvias de nivel verde. CCAA",
    "description": ""
   },
@@ -345,8 +355,8 @@
    "evenement": "Aviso de lluvias de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de lluvias de nivel verde. CCAA",
    "description": ""
   },
@@ -355,8 +365,8 @@
    "evenement": "Aviso de lluvias de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de lluvias de nivel verde. CCAA",
    "description": ""
   },
@@ -365,8 +375,8 @@
    "evenement": "Aviso de lluvias de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de lluvias de nivel verde. CCAA",
    "description": ""
   },
@@ -375,8 +385,8 @@
    "evenement": "Aviso de tormentas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de tormentas de nivel verde. CCAA",
    "description": ""
   },
@@ -385,8 +395,8 @@
    "evenement": "Aviso de tormentas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de tormentas de nivel verde. CCAA",
    "description": ""
   },
@@ -395,8 +405,8 @@
    "evenement": "Aviso de tormentas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de tormentas de nivel verde. CCAA",
    "description": ""
   },
@@ -405,8 +415,8 @@
    "evenement": "Aviso de tormentas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de tormentas de nivel verde. CCAA",
    "description": ""
   },
@@ -415,8 +425,8 @@
    "evenement": "Aviso de tormentas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de tormentas de nivel verde. CCAA",
    "description": ""
   },
@@ -425,8 +435,8 @@
    "evenement": "Aviso de tormentas de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de tormentas de nivel verde. CCAA",
    "description": ""
   },
@@ -435,8 +445,8 @@
    "evenement": "Aviso de vientos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel verde. CCAA",
    "description": ""
   },
@@ -445,8 +455,8 @@
    "evenement": "Aviso de vientos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel verde. CCAA",
    "description": ""
   },
@@ -455,8 +465,8 @@
    "evenement": "Aviso de vientos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel verde. CCAA",
    "description": ""
   },
@@ -465,8 +475,8 @@
    "evenement": "Aviso de vientos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel verde. CCAA",
    "description": ""
   },
@@ -475,8 +485,8 @@
    "evenement": "Aviso de vientos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel verde. CCAA",
    "description": ""
   },
@@ -485,8 +495,8 @@
    "evenement": "Aviso de vientos de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de vientos de nivel verde. CCAA",
    "description": ""
   },
@@ -495,8 +505,8 @@
    "evenement": "Aviso de polvo en suspensión de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
    "description": ""
   },
@@ -505,8 +515,8 @@
    "evenement": "Aviso de polvo en suspensión de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
    "description": ""
   },
@@ -515,8 +525,8 @@
    "evenement": "Aviso de polvo en suspensión de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
    "description": ""
   },
@@ -525,8 +535,8 @@
    "evenement": "Aviso de polvo en suspensión de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
    "description": ""
   },
@@ -535,8 +545,8 @@
    "evenement": "Aviso de polvo en suspensión de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
    "description": ""
   },
@@ -545,20 +555,10 @@
    "evenement": "Aviso de polvo en suspensión de nivel verde",
    "niveau": "verde",
    "gravite": "Minor",
-   "debut": "2026-11-28T00:00:00+01:00",
-   "fin": "2026-11-28T23:59:59+01:00",
+   "debut": "2026-11-29T00:00:00+01:00",
+   "fin": "2026-11-29T23:59:59+01:00",
    "titre": "Aviso de polvo en suspensión de nivel verde. CCAA",
    "description": ""
-  },
-  {
-   "zone": "Pirineo oscense",
-   "evenement": "Aviso de temperaturas mínimas de nivel amarillo",
-   "niveau": "amarillo",
-   "gravite": "Moderate",
-   "debut": "2026-11-27T00:00:00+01:00",
-   "fin": "2026-11-27T08:59:59+01:00",
-   "titre": "Aviso de temperaturas mínimas de nivel amarillo. Pirineo oscense",
-   "description": "Temperatura mínima: -6 ºC. Estos valores se esperan en el norte de la zona."
   }
  ],
  "routes": [
@@ -600,26 +600,6 @@
   },
   {
    "route": "N-330",
-   "pk": "534.0-532.0",
-   "gestion": "carriagewayClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "highest",
-   "depuis": "2026-11-16T10:00",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.92947,
-     -0.74510217
-    ],
-    [
-     41.913383,
-     -0.7571372
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
    "pk": "532.0-534.0",
    "gestion": "carriagewayClosures",
    "cause": "roadMaintenance",
@@ -639,6 +619,26 @@
    ]
   },
   {
+   "route": "N-330",
+   "pk": "534.0-532.0",
+   "gestion": "carriagewayClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "highest",
+   "depuis": "2026-11-16T10:00",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.92947,
+     -0.74510217
+    ],
+    [
+     41.913383,
+     -0.7571372
+    ]
+   ]
+  },
+  {
    "route": "HU-631",
    "pk": "",
    "gestion": "roadClosed",
@@ -651,186 +651,6 @@
     [
      42.51545,
      0.10019656
-    ]
-   ]
-  },
-  {
-   "route": "A-1603",
-   "pk": "0.0-10.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T17:11",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.48123,
-     -0.5816707
-    ],
-    [
-     42.50657,
-     -0.6578563
-    ]
-   ]
-  },
-  {
-   "route": "A-1603",
-   "pk": "0.0-10.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T17:11",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.48123,
-     -0.5816707
-    ],
-    [
-     42.50657,
-     -0.6578563
-    ]
-   ]
-  },
-  {
-   "route": "A-2611",
-   "pk": "0.0-13.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T20:00",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.637856,
-     0.21465822
-    ],
-    [
-     42.67594,
-     0.08731971
-    ]
-   ]
-  },
-  {
-   "route": "A-2611",
-   "pk": "0.0-13.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T20:00",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.637856,
-     0.21465822
-    ],
-    [
-     42.67594,
-     0.08731971
-    ]
-   ]
-  },
-  {
-   "route": "A-2609",
-   "pk": "0.0-12.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T20:01",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.58502,
-     0.21698043
-    ],
-    [
-     42.580353,
-     0.3357809
-    ]
-   ]
-  },
-  {
-   "route": "A-2609",
-   "pk": "0.0-12.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T20:01",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.58502,
-     0.21698043
-    ],
-    [
-     42.580353,
-     0.3357809
-    ]
-   ]
-  },
-  {
-   "route": "A-2617",
-   "pk": "5.0-12.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T20:02",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.586533,
-     0.54149806
-    ],
-    [
-     42.562904,
-     0.56859124
-    ]
-   ]
-  },
-  {
-   "route": "A-2617",
-   "pk": "5.0-12.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "high",
-   "depuis": "2026-11-25T20:02",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.586533,
-     0.54149806
-    ],
-    [
-     42.562904,
-     0.56859124
-    ]
-   ]
-  },
-  {
-   "route": "A-1205",
-   "pk": "7.0-17.0",
-   "gestion": "doNotUseSpecifiedLanesOrCarriageways",
-   "cause": "poorEnvironment",
-   "detail": null,
-   "gravite": "medium",
-   "depuis": "2026-11-25T16:09",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.524307,
-     -0.5598751
-    ],
-    [
-     42.480778,
-     -0.5834682
     ]
    ]
   },
@@ -856,26 +676,6 @@
   },
   {
    "route": "N-330",
-   "pk": "631.1-631.2",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-03-05T10:59",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.53749,
-     -0.3773081
-    ],
-    [
-     42.5374,
-     -0.37852547
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
    "pk": "632.85-630.5",
    "gestion": "newRoadworksLayout",
    "cause": "roadMaintenance",
@@ -891,26 +691,6 @@
     [
      42.534897,
      -0.37122956
-    ]
-   ]
-  },
-  {
-   "route": "A-23",
-   "pk": "413.4-416.0",
-   "gestion": "newRoadworksLayout",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-05-23T10:46",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.54068,
-     -0.3978
-    ],
-    [
-     42.54907,
-     -0.42510316
     ]
    ]
   },
@@ -935,18 +715,42 @@
    ]
   },
   {
-   "route": "N-123",
-   "pk": "",
-   "gestion": "lanesDeviated",
+   "route": "A-23",
+   "pk": "413.4-416.0",
+   "gestion": "newRoadworksLayout",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-09-21T11:08",
+   "depuis": "2026-05-23T10:46",
    "province": "Huesca",
    "coords": [
     [
-     42.025597,
-     0.13908309
+     42.54068,
+     -0.3978
+    ],
+    [
+     42.54907,
+     -0.42510316
+    ]
+   ]
+  },
+  {
+   "route": "N-330",
+   "pk": "631.1-631.2",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-03-05T10:59",
+   "province": "Huesca",
+   "coords": [
+    [
+     42.53749,
+     -0.3773081
+    ],
+    [
+     42.5374,
+     -0.37852547
     ]
    ]
   },
@@ -971,22 +775,18 @@
    ]
   },
   {
-   "route": "A-68",
-   "pk": "224.0-225.0",
-   "gestion": "laneClosures",
+   "route": "N-123",
+   "pk": "",
+   "gestion": "lanesDeviated",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-10-16T14:03",
-   "province": "Zaragoza",
+   "depuis": "2026-09-21T11:08",
+   "province": "Huesca",
    "coords": [
     [
-     41.579872,
-     -0.7642505
-    ],
-    [
-     41.58291,
-     -0.77235395
+     42.025597,
+     0.13908309
     ]
    ]
   },
@@ -1007,6 +807,26 @@
     [
      41.57997,
      -0.76419955
+    ]
+   ]
+  },
+  {
+   "route": "A-68",
+   "pk": "224.0-225.0",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-10-16T14:03",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.579872,
+     -0.7642505
+    ],
+    [
+     41.58291,
+     -0.77235395
     ]
    ]
   },
@@ -1108,7 +928,7 @@
   },
   {
    "route": "N-330",
-   "pk": "615.0-616.5",
+   "pk": "616.5-615.0",
    "gestion": "intermittentShortTermClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
@@ -1117,12 +937,12 @@
    "province": "Huesca",
    "coords": [
     [
-     42.42269,
-     -0.39611152
-    ],
-    [
      42.43567,
      -0.39653024
+    ],
+    [
+     42.42269,
+     -0.39611152
     ]
    ]
   },
@@ -1148,26 +968,6 @@
   },
   {
    "route": "N-330",
-   "pk": "616.5-615.0",
-   "gestion": "intermittentShortTermClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-23T09:13",
-   "province": "Huesca",
-   "coords": [
-    [
-     42.43567,
-     -0.39653024
-    ],
-    [
-     42.42269,
-     -0.39611152
-    ]
-   ]
-  },
-  {
-   "route": "N-330",
    "pk": "621.1-617.5",
    "gestion": "intermittentShortTermClosures",
    "cause": "roadMaintenance",
@@ -1187,66 +987,46 @@
    ]
   },
   {
-   "route": "A-2",
-   "pk": "324.8-325.8",
-   "gestion": "laneClosures",
+   "route": "N-330",
+   "pk": "615.0-616.5",
+   "gestion": "intermittentShortTermClosures",
    "cause": "roadMaintenance",
    "detail": "roadworks",
    "gravite": "unknown",
-   "depuis": "2026-11-26T20:02",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.678276,
-     -0.8499796
-    ],
-    [
-     41.676174,
-     -0.8383114
-    ]
-   ]
-  },
-  {
-   "route": "A-2",
-   "pk": "325.2-325.8",
-   "gestion": "laneClosures",
-   "cause": "roadMaintenance",
-   "detail": "roadworks",
-   "gravite": "unknown",
-   "depuis": "2026-11-26T20:02",
-   "province": "Zaragoza",
-   "coords": [
-    [
-     41.677334,
-     -0.8453186
-    ],
-    [
-     41.676174,
-     -0.8383114
-    ]
-   ]
-  },
-  {
-   "route": "A-2",
-   "pk": "438.2-438.45",
-   "gestion": "laneClosures",
-   "cause": "vehicleObstruction",
-   "detail": null,
-   "gravite": "unknown",
-   "depuis": "2026-11-26T20:19",
+   "depuis": "2026-11-23T09:13",
    "province": "Huesca",
    "coords": [
     [
-     41.521076,
-     0.37903526
+     42.42269,
+     -0.39611152
     ],
     [
-     41.52191,
-     0.38178426
+     42.43567,
+     -0.39653024
+    ]
+   ]
+  },
+  {
+   "route": "A-2",
+   "pk": "330.0-329.0",
+   "gestion": "laneClosures",
+   "cause": "roadMaintenance",
+   "detail": "roadworks",
+   "gravite": "unknown",
+   "depuis": "2026-11-26T21:42",
+   "province": "Zaragoza",
+   "coords": [
+    [
+     41.662094,
+     -0.79184425
+    ],
+    [
+     41.664707,
+     -0.8033406
     ]
    ]
   }
  ],
- "avis_maj": "2026-11-26T20:15Z",
- "routes_maj": "2026-11-26T20:15Z"
+ "avis_maj": "2026-11-27T02:56Z",
+ "routes_maj": "2026-11-27T02:56Z"
 }
